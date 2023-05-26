@@ -14,6 +14,10 @@
             <button>Readme</button>
         </div>
         <div>
+            <!-- Play / Pause control! -->
+
+        </div>
+        <div>
             <h1>Groove Box</h1>
         </div>
         <div>
@@ -25,7 +29,11 @@
         <!-- Where u chose what type of music u want to drum to section -->
         <div>
             <button>Jazz</button>
-            <button>Rock</button>
+            <div>
+                <p>Reggae</p>
+                <button onclick="playReggae()">play</button>
+                <button onclick="pauseReggae()">pause</button>
+            </div>
         </div>
         <div>
             <!-- Input drumpads! -->
@@ -40,5 +48,8 @@
             <p>song name</p>
         </div>
     </main>
+    <!-- Audio files! -->
+    <audio src="assets/sounds/reggae.mp3" type="audio/mp3" id="reggae"></audio>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
