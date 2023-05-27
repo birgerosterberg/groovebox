@@ -4,9 +4,9 @@
 // Function to play the reggae music
 
 function playReggae() {
-let reggae = document.getElementById('reggae');
+    let reggae = document.getElementById('reggae');
 
-reggae.play();
+    reggae.play();
 }
 
 // Function to pause the reggae music
@@ -15,4 +15,9 @@ function pauseReggae() {
     let reggae = document.getElementById('reggae');
     
     reggae.pause();
-    }
+}
+
+function kick() {
+    let kick = document.getElementById('kick');
+    kick.play();
+}
