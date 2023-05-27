@@ -13,6 +13,7 @@ function changeTab(tabIndex) {
     tabs[tabIndex].classList.add("tabActive");
     contents[tabIndex].classList.add("tabActive");
   }
+  changeTab(4); // Make sure the initial tab is the How To Tab!
 
 /**
  * Music player for buttons onclick functionality
@@ -74,7 +75,7 @@ const sequencers = document.querySelectorAll('.sequencer'); // selects all the e
 const playButton = document.getElementById('play-btn'); // selects the play button
 const kickSound = document.getElementById('kick-sound'); // Adds the sound that i want to use!  (ToDo: Make it reusable for other sounds and more sequencers!!)
 let isPlaying = false; // Using boolean false to not make it play!
-let currentStep = 0; // Make sure it starts at step 1!
+let currentStep = 0; // Make sure it starts at step 0(1)!
 
 // Add event listeners to sequencer
 sequencers.forEach((sequencer) => {
@@ -95,7 +96,7 @@ function togglePlayback() {
 
   if (isPlaying) {
     playButton.textContent = 'Pause'; // Changes the text to Pause if its playing
-    currentStep = 0; // Make sure it always starts from Step 1
+    currentStep = 0; // Make sure it always starts from Step 0(1)
     playActiveSequencers();
   } else {
     playButton.textContent = 'Play'; // Changes the text to play if its paused
