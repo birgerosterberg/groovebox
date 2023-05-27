@@ -109,7 +109,10 @@ function playActiveSequencers() {
     if (i === currentStep && sequencer.classList.contains('active')) {
       // Play the kick sound for the active part! ToDO (Make this reusable for other sounds!)
       kickSound.play();
-
+      // Need to find out how to make it add this on steps that aint active... also...
+      sequencer.style.opacity = '0.5'; // Change opacity to the step playing.
+    } else {
+        sequencer.style.opacity = '1' // Change back opacity...
     }
   });
 
