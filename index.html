@@ -34,11 +34,14 @@
             </div>
         </div>
         <div>
-            <!-- Input drumpads! -->
-            <button onclick="kick()">A Kick</button>
+            <!-- 
+                Input drumpads! need to insert the right data-key
+                 from the audio in the function clickPlay('insert number here') 
+            -->
+            <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
             input pads!
         </div>
-        <!-- Information about the key pressed andaa the sound played! -->
+        <!-- Information about the key pressed and the sound played! -->
         <div>
             <p>Key pressed: <span></span> </p>
             <p>Sound played: <span></span> </p>
@@ -49,7 +52,9 @@
     </main>
     <!-- Audio files! -->
     <audio src="assets/sounds/reggae.mp3" type="audio/mp3" id="reggae"></audio>
-    <audio data-key="65" src="assets/sounds/kick.wav" type="audio/wav" id="kick"></audio>
+    <!-- Drum Pad sounds -->
+    <audio data-key="65" src="assets/sounds/kick.wav" type="audio/wav"></audio>
+    <!-- Main javascript file! -->
     <script src="assets/js/index.js"></script>
 </body>
 </html>

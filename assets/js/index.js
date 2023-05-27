@@ -8,15 +8,17 @@ function playReggae() {
     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
 }
 
-// Onclick Kick function
-function kick() {
-    let kick = document.getElementById('kick');
-    kick.play();
+// Onclick audio function, takes the data-key from the audio and adds it when clicked fron the onclick function
+function clickPlay(audioIn) {
+    const audio = document.querySelector(`audio[data-key="${audioIn}"]`);
+    audio.play();
 }
 
-// Keydown functions!
-function padPlay(event) {
-    console.log(event.key)
-    
+
+// Keydown functions! Takes the data-keyCode info and makes sure it plays the right sound!
+function keyPlay(event) {
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    console.log(event.keyCode);
+    audio.play();
 }
-window.addEventListener('keydown', padPlay);
+window.addEventListener('keydown', keyPlay);
