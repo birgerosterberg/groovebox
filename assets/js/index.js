@@ -5,6 +5,7 @@
 function playMusic(musicId) {
     let toggleMusic = document.getElementById(musicId);
     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
+
 }
 
 // Onclick audio function, takes the data-key from the audio and adds it when clicked fron the onclick function
@@ -20,6 +21,10 @@ function clickPlay(audioIn) {
     }
     audio.play();
 }
+
+// Volume Slider function
+
+
 
 
 // Keydown functions! Takes the data-keyCode info and makes sure it plays the right sound!
@@ -39,3 +44,18 @@ function keyPlay(event) {
     }
 }
 window.addEventListener('keydown', keyPlay);
+
+
+// 
+//    Trying to get this sequencer to work!
+//  
+
+const sequencers = document.getElementsByClassName('sequencer');
+
+for (let i = 0; i < sequencers.length; i++) {
+    sequencers[i].addEventListener('click', sequenceMe);
+  }
+
+function sequenceMe() { 
+    console.log('clicked my boxes yo!');
+}
