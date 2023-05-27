@@ -4,19 +4,12 @@
 // Function to play the reggae music
 
 function playReggae() {
-    let reggae = document.getElementById('reggae');
+    let toggleMusic = document.getElementById('reggae');
 
-    reggae.play();
+    return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
 }
 
-// Function to pause the reggae music
-
-function pauseReggae() {
-    let reggae = document.getElementById('reggae');
-    
-    reggae.pause();
-}
-
+// Onclick Kick function
 function kick() {
     let kick = document.getElementById('kick');
     kick.play();
