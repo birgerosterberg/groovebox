@@ -27,11 +27,14 @@
     </header>
     <!-- Main section of it all -->
     <main>
-        <!-- Where u chose what type of music u want to drum to section -->
+        <!-- 
+            Where u chose what type of music u want to drum to section 
+            Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
+        -->
         <div>
             <button>Jazz</button>
             <div>
-                <button onclick="playReggae('reggae')">Reggae</button>
+                <button onclick="playMusic('reggae')">Reggae</button>
             </div>
         </div>
         <div>
@@ -44,8 +47,8 @@
         </div>
         <!-- Information about the key pressed and the sound played! -->
         <div>
-            <p>Key pressed: <span></span> </p>
-            <p>Sound played: <span></span> </p>
+            <p>Key pressed: <span id="key-press"></span> </p>
+            <p>Sound played: <span id="sound-played"></span> </p>
         </div>
         <div>
             <p>song name</p>
@@ -54,7 +57,7 @@
     <!-- Audio files! -->
     <audio src="assets/sounds/reggae.mp3" type="audio/mp3" id="reggae"></audio>
     <!-- Drum Pad sounds -->
-    <audio data-key="65" src="assets/sounds/kick.wav" type="audio/wav"></audio>
+    <audio data-name="kick" data-key="65" src="assets/sounds/kick.wav" type="audio/wav"></audio>
     <!-- Main javascript file! -->
     <script src="assets/js/index.js"></script>
 </body>
