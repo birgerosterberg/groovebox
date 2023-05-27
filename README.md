@@ -6,7 +6,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd \
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio \
 https://www.toptal.com/developers/keycode \
 Keyboard Events from Code Institute Course! \
-Adding Event Listeners from Code Institute Course!
+Adding Event Listeners from Code Institute Course! \
+https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript
 
 ## Media
 

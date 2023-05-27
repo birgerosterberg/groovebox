@@ -1,3 +1,19 @@
+// Page Tabs!
+function changeTab(tabIndex) {
+    const tabs = document.getElementsByClassName("tab");
+    const contents = document.getElementsByClassName("content");
+  
+    // Remove "tabActive" class from all tabs and contents
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("tabActive");
+      contents[i].classList.remove("tabActive");
+    }
+  
+    // Add "tabActive" class to the selected tab and content
+    tabs[tabIndex].classList.add("tabActive");
+    contents[tabIndex].classList.add("tabActive");
+  }
+
 /**
  * Music player for buttons onclick functionality
  */
@@ -93,7 +109,7 @@ function playActiveSequencers() {
     if (i === currentStep && sequencer.classList.contains('active')) {
       // Play the kick sound for the active part! ToDO (Make this reusable for other sounds!)
       kickSound.play();
-      console.log(currentStep);
+
     }
   });
 

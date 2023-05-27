@@ -8,94 +8,119 @@
     <title>Groove Box</title>
 </head>
 <body>
-    <!-- Header section of the page, includes button, h1 and audio control -->
     <header>
         <!-- Modal for instructions -->
         <div>
             <button>Readme</button>
         </div>
-        <div>
-            <!-- Play / Pause control! -->
 
-        </div>
         <div>
             <h1>Groove Box</h1>
         </div>
-        <div>
-            <button onclick="audio.pause()">PLAY</button>
-            <p>play pause button</p>
-        </div>
     </header>
+    <!-- Header section of the page, includes button, h1 and audio control -->
+
     <!-- Main section of it all -->
     <main>
-        <!-- 
-            Where u chose what type of music u want to drum to section 
-            Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
-        -->
-        <div>
-            <button>Jazz</button>
-            <div>
-                <button onclick="playMusic('reggae')">Reggae</button>
+        <div class="tabs">
+            <div class="tab" onclick="changeTab(0)">Drum Machine</div>
+            <div class="tab" onclick="changeTab(1)">Sequencer</div>
+            <div class="tab" onclick="changeTab(2)">Loops</div>
+            <div class="tab" onclick="changeTab(3)">Backing tracks</div>
+
+            <div class="tab-content">
+                <div class="content">
+                    <div>
+                        <!-- 
+                            Input drumpads! need to insert the right data-key
+                             from the audio in the function clickPlay('insert number here') 
+                        -->
+                        <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
+                        input pads!
+                    </div>
+                    <!-- Information about the key pressed and the sound played! -->
+                    <div>
+                        <p>Key pressed: <span id="key-press"></span> </p>
+                        <p>Sound played: <span id="sound-played"></span> </p>
+                    </div>
+                    <div>
+                        <p>song name</p>
+                    </div>
+                    <div>
+                        <input type="range" name="volume" id="volume-slide" min="0" max="100" value="50">
+                    </div>
+
+                </div>
+                <div class="content">
+                    <div class="seq-container">
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                        <div class="seq-blocks">
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+                            <div class="sequencer"></div>
+
+                        </div>
+                    </div>
+                    <button id="play-btn">Play</button>
+
+
+                </div>
+                <div class="content">
+
+
+                </div>
+                <div class="content">
+                    <div>
+                        <!-- 
+                            Where u chose what type of music u want to drum to section 
+                            Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
+                            -->
+                        <button>Jazz</button>
+                        <div>
+
+                            <button onclick="playMusic('reggae')">Reggae</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div>
-            <!-- 
-                Input drumpads! need to insert the right data-key
-                 from the audio in the function clickPlay('insert number here') 
-            -->
-            <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
-            input pads!
-        </div>
-        <!-- Information about the key pressed and the sound played! -->
-        <div>
-            <p>Key pressed: <span id="key-press"></span> </p>
-            <p>Sound played: <span id="sound-played"></span> </p>
-        </div>
-        <div>
-            <p>song name</p>
-        </div>
-        <div>
-            <input type="range" name="volume" id="volume-slide" min="0" max="100" value="50">
-        </div>
-        <div class="seq-container">
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-            <div class="seq-blocks">
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-                <div class="sequencer"></div>
-            </div>
-        </div>
-        <button id="play-btn">Play</button>
+
 
     </main>
     <!-- Audio files! -->
