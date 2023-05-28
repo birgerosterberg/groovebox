@@ -1,8 +1,20 @@
+body {
+  margin: auto;
+}
+.tab-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .tab {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 5px;
-  background-color: gray;
+  background-color: grey;
+  padding: 10px;
+  height: 50px;
+  border: 1px black solid;
+  text-align: center;
 }
 
 .tab-content .content {
@@ -13,18 +25,29 @@
   display: block;
 }
 
-.seq-container {
+/* Reusable flex container with column */
+.container-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
+
+/* Drum Machine Styles! */
+.pad-container {
+  text-align: center;
+}
+.pad {
+  padding: 50px;
+}
+/* Sequencer Styles! */
 .seq-blocks {
   display: flex;
 }
 
 .sequencer {
   background-color: grey;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: flex;
   margin: 5px;
   cursor: pointer;

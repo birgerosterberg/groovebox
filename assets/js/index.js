@@ -15,18 +15,11 @@ function changeTab(tabIndex) {
   }
   changeTab(4); // Make sure the initial tab is the How To Tab!
 
+  let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function
+
 /**
  * Music player for buttons onclick functionality
  */
-// Function to play the reggae music
-// function playMusic(musicId) {
-//     let toggleMusic = document.getElementById(musicId); 
-    
-//     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
-// }
-
-let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function
-
 function playMusic(musicId) {
     let toggleMusic = document.getElementById(musicId);
     currentMusic = musicId; // Set whats playing to and external variable!
@@ -117,7 +110,7 @@ playButton.addEventListener('click', togglePlayback);
 
 function toggleSequencer() {
   this.classList.toggle('active');   // Toggle the 'active' class on the sequencer
-  this.style.backgroundColor = this.classList.contains('active') ? 'green' : 'gray'; // Update the background color based on the 'active' class
+  this.style.backgroundColor = this.classList.contains('active') ? 'green' : 'grey'; // Update the background color based on the 'active' class
 }
 
 function togglePlayback() {

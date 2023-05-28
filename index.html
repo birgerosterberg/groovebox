@@ -16,103 +16,98 @@
             <input type="range" name="volume" min="0" max="100" value="50" oninput="updateVolume(this.value)">
         </div>
     </header>
-
     <!-- Main section of it all -->
     <main>
         <div class="tabs">
-            <div class="tab" onclick="changeTab(4)">HowTo</div>
-            <div class="tab" onclick="changeTab(0)">Drum Machine</div>
-            <div class="tab" onclick="changeTab(1)">Sequencer</div>
-            <div class="tab" onclick="changeTab(2)">Loops</div>
-            <div class="tab" onclick="changeTab(3)">Backing tracks</div>
-
+            <div class="tab-container">
+                <div class="tab" onclick="changeTab(4)">
+                    <p>HowTo</p>
+                </div>
+                <div class="tab" onclick="changeTab(0)">
+                    <p>Drum Machine</p>
+                </div>
+                <div class="tab" onclick="changeTab(1)">
+                    <p>Sequencer</p>
+                </div>
+                <div class="tab" onclick="changeTab(2)">
+                    <p>Loops</p>
+                </div>
+                <div class="tab" onclick="changeTab(3)">
+                    <p>Backing tracks</p>
+                </div>
+            </div>
             <div class="tab-content">
                 <div class="content">
-                    <div>
+                    <div class="container-col">
                         <!-- 
                             Input drumpads! need to insert the right data-key
                              from the audio in the function clickPlay('insert number here') 
                         -->
-                        <div>
+                        <div class="pad-container">
                             <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
                             <button class="pad" onclick="clickPlay(83)">KICK <kbd>S</kbd></button>
                             <button class="pad" onclick="clickPlay(68)">KICK <kbd>D</kbd></button>
                             <button class="pad" onclick="clickPlay(70)">KICK <kbd>F</kbd></button>
                         </div>
-                        <div>
+                        <div class="pad-container">
                             <button class="pad" onclick="clickPlay(72)">KICK <kbd>H</kbd></button>
                             <button class="pad" onclick="clickPlay(74)">KICK <kbd>J</kbd></button>
                             <button class="pad" onclick="clickPlay(75)">KICK <kbd>K</kbd></button>
                             <button class="pad" onclick="clickPlay(76)">KICK <kbd>L</kbd></button>
                         </div>
-
                     </div>
                     <!-- Information about the key pressed and the sound played! -->
                     <div>
                         <p>Key pressed: <span id="key-press"></span> </p>
                         <p>Sound played: <span id="sound-played"></span> </p>
                     </div>
-                    <div>
-                        <p>song name</p>
-                    </div>
-
-
                 </div>
                 <div class="content">
-                    <div class="seq-container">
+                    <div class="container-col">
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                         <div class="seq-blocks">
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
                             <div class="sequencer"></div>
-
                         </div>
                     </div>
                     <button id="play-btn">Play</button>
-
-
                 </div>
                 <div class="content">
                     <h2>Loops!</h2>
-
                 </div>
                 <div class="content">
-                    <div>
+                    <div class="container-col">
                         <!-- 
                             Where u chose what type of music u want to drum to section 
                             Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
@@ -126,16 +121,12 @@
                         <input type="range" name="volume-back" min="0" max="100" value="50"
                             oninput="changeBckTrkVol(this.value)">
                     </div>
-
-
                 </div>
                 <div class="content">
                     <h2>How To use this?!</h2>
                 </div>
             </div>
         </div>
-
-
     </main>
     <!-- Audio files! -->
     <audio src="assets/sounds/reggae.mp3" type="audio/mp3" id="reggae"></audio>
