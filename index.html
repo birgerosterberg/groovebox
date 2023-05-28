@@ -12,6 +12,9 @@
         <div>
             <h1>Groove Box</h1>
         </div>
+        <div>
+            <input type="range" name="volume" min="0" max="100" value="50" oninput="updateVolume(this.value)">
+        </div>
     </header>
 
     <!-- Main section of it all -->
@@ -30,8 +33,19 @@
                             Input drumpads! need to insert the right data-key
                              from the audio in the function clickPlay('insert number here') 
                         -->
-                        <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
-                        input pads!
+                        <div>
+                            <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
+                            <button class="pad" onclick="clickPlay(83)">KICK <kbd>S</kbd></button>
+                            <button class="pad" onclick="clickPlay(68)">KICK <kbd>D</kbd></button>
+                            <button class="pad" onclick="clickPlay(70)">KICK <kbd>F</kbd></button>
+                        </div>
+                        <div>
+                            <button class="pad" onclick="clickPlay(72)">KICK <kbd>H</kbd></button>
+                            <button class="pad" onclick="clickPlay(74)">KICK <kbd>J</kbd></button>
+                            <button class="pad" onclick="clickPlay(75)">KICK <kbd>K</kbd></button>
+                            <button class="pad" onclick="clickPlay(76)">KICK <kbd>L</kbd></button>
+                        </div>
+
                     </div>
                     <!-- Information about the key pressed and the sound played! -->
                     <div>
@@ -41,9 +55,7 @@
                     <div>
                         <p>song name</p>
                     </div>
-                    <div>
-                        <input type="range" name="volume" id="volume-slide" min="0" max="100" value="50">
-                    </div>
+
 
                 </div>
                 <div class="content">
@@ -107,10 +119,14 @@
                             -->
                         <button>Jazz</button>
                         <div>
-
                             <button onclick="playMusic('reggae')">Reggae</button>
                         </div>
                     </div>
+                    <div>
+                        <input type="range" name="volume-back" min="0" max="100" value="50"
+                            oninput="changeBckTrkVol(this.value)">
+                    </div>
+
 
                 </div>
                 <div class="content">

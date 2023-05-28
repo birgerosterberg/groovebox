@@ -19,12 +19,42 @@ function changeTab(tabIndex) {
  * Music player for buttons onclick functionality
  */
 // Function to play the reggae music
+// function playMusic(musicId) {
+//     let toggleMusic = document.getElementById(musicId); 
+    
+//     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
+// }
+
+let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function
+
 function playMusic(musicId) {
     let toggleMusic = document.getElementById(musicId);
+    currentMusic = musicId; // Set whats playing to and external variable!
     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
+
 }
 
-// Volume Slider function ToDo: (How to make it change the volume on the background music?!)
+function changeBckTrkVol(volume) {
+    const volumeValue = volume / 100;
+    const getMusic = document.getElementById(currentMusic);
+  
+    if (getMusic) {
+      getMusic.volume = volumeValue;
+    }
+  }
+
+// Volume Slider function, changes all volume!
+function updateVolume(volume) {
+    const volumeValue = volume / 100;
+  
+    // Get all audio elements
+    const audioElements = document.getElementsByTagName('audio');
+  
+    // Set the volume for each audio element
+    for (let i = 0; i < audioElements.length; i++) {
+      audioElements[i].volume = volumeValue;
+    }
+  }
 
 
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function

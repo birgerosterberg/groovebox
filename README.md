@@ -14,6 +14,7 @@ https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript
 ### Samples
 
 https://soundpacks.com/free-sound-packs/jazz-drum-kit/
+https://www.drumkito.com/sample-packs/roland-tr-808-sample-pack/
 
 ### Songs
 
