@@ -110,7 +110,7 @@ playButton.addEventListener('click', togglePlayback);
 
 function toggleSequencer() {
   this.classList.toggle('active');   // Toggle the 'active' class on the sequencer
-  this.style.backgroundColor = this.classList.contains('active') ? 'green' : 'grey'; // Update the background color based on the 'active' class
+  this.style.backgroundColor = this.classList.contains('active') ? 'green' : '#eaeaea'; // Update the background color based on the 'active' class
 }
 
 function togglePlayback() {

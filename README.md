@@ -1,5 +1,21 @@
 # Groove Box Project nr. 2
 
+## Design
+
+Color code HIGH END AND CLASSY used from: \
+https://hookagency.com/blog/web-design-color-palettes/ \
+![color code inspiration](assets/readme/color-ideas-web-design-classy-distinctive.webp) \
+dark-gold {color: #8E793E} \
+light-gold {color: #AD974F}\
+intellectual-grey {color: #231F20} \
+light-grey {color: #EAEAEA}
+
+Gradients from: \
+https://cssgradient.io/ \
+
+Box Shadows from: \
+https://getcssscan.com/css-box-shadow-examples
+
 ## Learning content used
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd \
