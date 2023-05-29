@@ -1,3 +1,5 @@
+/* Google fonts import! */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap");
 /* Color codes to use!
 dark-gold {color: #8E793E} // Border color!
 light-gold {color: #AD974F}
@@ -9,10 +11,17 @@ body {
   margin: auto;
   background-color: #231f20;
   color: #eaeaea;
+  font-family: "Raleway", sans-serif;
 }
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+}
+
 button {
   background-color: #ad974f;
-  border: 0px;
+  border: 2px solid black;
   border-radius: 20px;
   color: #eaeaea;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -27,7 +36,7 @@ button:active {
   background: radial-gradient(
     circle,
     rgba(55, 255, 0, 0.8) 0%,
-    rgba(142, 121, 62, 1) 50%
+    rgba(142, 121, 62, 1) 70%
   );
 }
 
@@ -41,10 +50,10 @@ button:active {
   cursor: pointer;
   display: inline-block;
   background-color: #8e793e;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 5px 0px 5px;
   margin: 2px;
-  height: 50px;
-  border: 1px #ad974f solid;
+  text-align: center;
+  border: 2px black solid;
   border-radius: 5px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -53,7 +62,9 @@ button:active {
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
+.tab:hover {
+  background-color: #ad974f;
+}
 .tab-content .content {
   display: none;
 }
@@ -67,17 +78,45 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-
+.container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.header-row {
+  flex-wrap: wrap;
+  font-size: 10px;
+  justify-content: space-around;
+}
+.masterVol {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: #8e793e;
+  width: 75px;
+  height: 5px;
+  border-radius: 5px;
+}
+.masterVol::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ad974f;
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  border: 0.5px solid #eaeaea;
+}
 /* Drum Machine Styles! */
 .pad-container {
   text-align: center;
 }
 .pad {
-  padding: 50px;
-  margin: 5px;
+  height: 70px;
+  width: 70px;
 }
 /* Sequencer Styles! */
+
 #play-btn {
   padding: 10px;
 }
@@ -86,11 +125,14 @@ button:active {
 }
 
 .sequencer {
-  background-color: #eaeaea;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  margin: 5px;
   cursor: pointer;
+
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+
+  background-color: #eaeaea;
+  border: 3px solid #8e793e;
   border-radius: 5px;
 }

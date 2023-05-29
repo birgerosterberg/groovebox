@@ -9,11 +9,15 @@
 </head>
 <body>
     <header>
-        <div>
-            <h1>Groove Box</h1>
-        </div>
-        <div>
-            <input type="range" name="volume" min="0" max="100" value="50" oninput="updateVolume(this.value)">
+        <div class="container-row header-row">
+            <div>
+                <h1>Groove Box</h1>
+            </div>
+            <div class="container-col">
+                <p>Master Volume</p>
+                <input type="range" class="masterVol" name="volume" min="0" max="100" value="50"
+                    oninput="updateVolume(this.value)">
+            </div>
         </div>
     </header>
     <!-- Main section of it all -->
@@ -57,7 +61,7 @@
                         </div>
                     </div>
                     <!-- Information about the key pressed and the sound played! -->
-                    <div>
+                    <div class="container-col">
                         <p>Key pressed: <span id="key-press"></span> </p>
                         <p>Sound played: <span id="sound-played"></span> </p>
                     </div>
@@ -119,7 +123,7 @@
                         </div>
                     </div>
                     <div>
-                        <input type="range" name="volume-back" min="0" max="100" value="50"
+                        <input type="range" class="masterVol" name="volume-back" min="0" max="100" value="50"
                             oninput="changeBckTrkVol(this.value)">
                     </div>
                 </div>
