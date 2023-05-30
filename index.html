@@ -48,16 +48,16 @@
                              from the audio in the function clickPlay('insert number here') 
                         -->
                         <div class="pad-container">
-                            <button class="pad" onclick="clickPlay(65)">KICK <kbd>A</kbd></button>
-                            <button class="pad" onclick="clickPlay(83)">KICK <kbd>S</kbd></button>
-                            <button class="pad" onclick="clickPlay(68)">KICK <kbd>D</kbd></button>
-                            <button class="pad" onclick="clickPlay(70)">KICK <kbd>F</kbd></button>
+                            <button class="pad" onclick="clickPlay(65)">Kick <p><kbd>A</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(83)">Open HiHat <p><kbd>S</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(68)">Clap <p><kbd>D</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(70)">Mid Perc <p><kbd>F</kbd></p> </button>
                         </div>
                         <div class="pad-container">
-                            <button class="pad" onclick="clickPlay(72)">KICK <kbd>H</kbd></button>
-                            <button class="pad" onclick="clickPlay(74)">KICK <kbd>J</kbd></button>
-                            <button class="pad" onclick="clickPlay(75)">KICK <kbd>K</kbd></button>
-                            <button class="pad" onclick="clickPlay(76)">KICK <kbd>L</kbd></button>
+                            <button class="pad" onclick="clickPlay(72)">Low Perc <p><kbd>H</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(74)">Shaker <p><kbd>J</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(75)">Closed HiHat <p><kbd>K</kbd></p> </button>
+                            <button class="pad" onclick="clickPlay(76)">Snare <p><kbd>L</kbd></p> </button>
                         </div>
                     </div>
                     <!-- Information about the key pressed and the sound played! -->
@@ -136,7 +136,26 @@
     <!-- Audio files! -->
     <audio src="assets/sounds/reggae.mp3" type="audio/mp3" id="reggae"></audio>
     <!-- Drum Pad sounds -->
-    <audio data-name="kick" data-key="65" id="kick-sound" src="assets/sounds/kick.wav" type="audio/wav"></audio>
+    <!-- Left hand sounds! -->
+    <audio data-name="kick" data-key="65" id="kick-sound" src="assets/sounds/oneshot/kick.mp3" type="audio/mp3"></audio>
+    <audio data-name="hihat-open" data-key="83" id="hihatopen-sound" src="assets/sounds/oneshot/hihatopen.mp3"
+        type="audio/mp3"></audio>
+    <audio data-name="clap" data-key="68" id="clap-sound" src="assets/sounds/oneshot/claps.mp3"
+        type="audio/mp3"></audio>
+    <audio data-name="mid percussion" data-key="70" id="midperc-sound" src="assets/sounds/oneshot/midperc.mp3"
+        type="audio/mp3"></audio>
+    <!-- Right hand sounds! -->
+    <audio data-name="low percussion" data-key="72" id="lowperc-sound" src="assets/sounds/oneshot/lowperc.mp3"
+        type="audio/mp3"></audio>
+    <audio data-name="shaker" data-key="74" id="shaker-sound" src="assets/sounds/oneshot/shaker.mp3"
+        type="audio/mp3"></audio>
+    <audio data-name="hihat-closed" data-key="75" id="hihatclosed-sound" src="assets/sounds/oneshot/hihatclosed.mp3"
+        type="audio/mp3"></audio>
+    <audio data-name="snare" data-key="76" id="snare-sound" src="assets/sounds/oneshot/hardsnare.mp3"
+        type="audio/mp3"></audio>
+
+
+
     <!-- Main javascript file! -->
     <script src="assets/js/index.js"></script>
 </body>
