@@ -63,13 +63,11 @@ function updateVolume(volume) {
   }
 
 // Key click play functions
-  
-
 
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function
 function clickPlay(event, audioIn) {
     const audio = document.querySelector(`audio[data-key='${audioIn}']`);  // Find the audio element with the corresponding data-key attribute
-    const button = event.target;
+    const button = event.currentTarget;
 
     // Get the DOM elements for displaying the current key and sound name
     const currentKey = document.getElementById('key-press');
