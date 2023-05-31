@@ -21,11 +21,20 @@ function changeTab(tabIndex) {
 /**
  * Music player for buttons onclick functionality
  */
-function playMusic(musicId) {
+function playMusic(event, musicId) {
     let toggleMusic = document.getElementById(musicId);
+    const button = event.target;
+
     currentMusic = musicId; // Set whats playing to and external variable!
-    return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
-}
+
+    if (toggleMusic.paused) {
+      toggleMusic.play();
+      button.classList.add('bactive'); // Add the "bactive" class when playing
+    } else {
+      toggleMusic.pause();
+      button.classList.remove('bactive'); // Remove the "bactive" class when paused
+    }
+  }
 
 
 /**
