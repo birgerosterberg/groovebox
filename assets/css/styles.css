@@ -123,7 +123,9 @@ button:active {
   width: 100px;
 }
 /* Sequencer Styles! */
-
+#key-press {
+  font-style: capitalize;
+}
 #play-btn {
   padding: 10px;
 }
