@@ -64,12 +64,12 @@ function updateVolume(volume) {
 
 // Key click play functions
   
-// Add a keydown event listener to the window and call the keyPlay function
-window.addEventListener('keydown', keyPlay);
+
 
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function
-function clickPlay(audioIn) {
+function clickPlay(event, audioIn) {
     const audio = document.querySelector(`audio[data-key='${audioIn}']`);  // Find the audio element with the corresponding data-key attribute
+    const button = event.target;
 
     // Get the DOM elements for displaying the current key and sound name
     const currentKey = document.getElementById('key-press');
@@ -80,8 +80,19 @@ function clickPlay(audioIn) {
       const soundName = audio.getAttribute('data-name'); // Get the data-name attribute value of the audio element
       currentKey.innerHTML = `You clicked!`; // Update the current key element with a message
       soundNameElement.innerHTML = soundName; // Update the sound name element with the name of the sound played
+      button.classList.add('bactive'); // Add the "bactive" class to the button
+  
+      // Remove the "bactive" class after a certain duration with a function
+      setTimeout(function() {
+        button.classList.remove('bactive');
+      }, 200);
+  
     }
   }
+
+// Add a keydown event listener to the window and call the keyPlay function
+
+window.addEventListener('keydown', keyPlay);
 
 // Keydown functions! Takes the data-keyCode info and makes sure it plays the right sound!
 
