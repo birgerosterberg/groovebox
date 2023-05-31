@@ -109,7 +109,13 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h2>Loops!</h2>
+                    <div class="container-col">
+                        <button class="pad" onclick="playMusic('cinemachord')">Cinematic Chord</button>
+                        <button class="pad" onclick="playMusic('dreamygc')">Dreamy Guitar Chords</button>
+                        <button class="pad" onclick="playMusic('warmbreeze')">Warm Breeze Lo-Fi</button>
+                        <button class="pad" onclick="playMusic('widearppiano')">Wide Arp Piano & Guitar</button>
+                        <button class="pad" onclick="playMusic('spaceychord')">Spacey Chords</button>
+                    </div>
                 </div>
                 <div class="content">
                     <div class="container-col">
@@ -119,7 +125,7 @@
                             -->
                         <button>Jazz</button>
                         <div>
-                            <button onclick="playMusic('reggae')">Reggae</button>
+                            <button class="play-status" onclick="playMusic('reggae')">Reggae</button>
                         </div>
                     </div>
                     <div>
@@ -134,9 +140,31 @@
         </div>
     </main>
     <!-- Audio files! -->
-    <audio src="assets/sounds//bcktrk/reggae.mp3" type="audio/mp3" id="reggae"></audio>
+    <!-- Backing tracks! -->
+
+    <audio src="assets/sounds/bcktrk/reggae.mp3" type="audio/mp3" id="reggae"></audio>
+
+    <!-- End of backing tracks -->
+
+    <!-- Loop sounds -->
+
+    <audio src="assets/sounds/loops/cinematic-synth-keys-organ-chord-progression.mp3" type="audio/mp3"
+        id="cinemachord"></audio>
+    <audio src="assets/sounds/loops/dreamy-guitar-chords.mp3" type="audio/mp3" id="dreamygc"></audio>
+    <audio src="assets/sounds/loops/spacey-chords.mp3" type="audio/mp3" id="spaceychord"></audio>
+    <audio src="assets/sounds/loops/warm-breeze-calm-lo-fi-brass.mp3" type="audio/mp3" id="warmbreeze"></audio>
+    <audio src="assets/sounds/loops/wide-arpeggiated-piano-and-guitar-melody.mp3" type="audio/mp3"
+        id="widearppiano"></audio>
+
+
+
+
+    <!-- End of Loop Sounds -->
+
     <!-- Drum Pad sounds -->
+
     <!-- Left hand sounds! -->
+
     <audio data-name="kick" data-key="65" id="kick-sound" src="assets/sounds/oneshot/kick.mp3" type="audio/mp3"></audio>
     <audio data-name="hihat-open" data-key="83" id="hihatopen-sound" src="assets/sounds/oneshot/hihatopen.mp3"
         type="audio/mp3"></audio>
@@ -144,7 +172,9 @@
         type="audio/mp3"></audio>
     <audio data-name="mid percussion" data-key="70" id="midperc-sound" src="assets/sounds/oneshot/midperc.mp3"
         type="audio/mp3"></audio>
+
     <!-- Right hand sounds! -->
+
     <audio data-name="low percussion" data-key="72" id="lowperc-sound" src="assets/sounds/oneshot/lowperc.mp3"
         type="audio/mp3"></audio>
     <audio data-name="shaker" data-key="74" id="shaker-sound" src="assets/sounds/oneshot/shaker.mp3"
@@ -153,8 +183,6 @@
         type="audio/mp3"></audio>
     <audio data-name="snare" data-key="76" id="snare-sound" src="assets/sounds/oneshot/hardsnare.mp3"
         type="audio/mp3"></audio>
-
-
 
     <!-- Main javascript file! -->
     <script src="assets/js/index.js"></script>

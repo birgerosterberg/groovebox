@@ -1,22 +1,22 @@
 // Page Tabs!
 function changeTab(tabIndex) {
-    const tabs = document.getElementsByClassName("tab");
-    const contents = document.getElementsByClassName("content");
+    const tabs = document.getElementsByClassName('tab');
+    const contents = document.getElementsByClassName('content');
   
     // Remove "tabActive" class from all tabs and contents
     for (let i = 0; i < tabs.length; i++) {
-      tabs[i].classList.remove("tabActive");
-      contents[i].classList.remove("tabActive");
+      tabs[i].classList.remove('tabActive');
+      contents[i].classList.remove('tabActive');
     }
   
     // Add "tabActive" class to the selected tab and content
-    tabs[tabIndex].classList.add("tabActive");
-    contents[tabIndex].classList.add("tabActive");
+    tabs[tabIndex].classList.add('tabActive');
+    contents[tabIndex].classList.add('tabActive');
   }
   changeTab(4); // Make sure the initial tab is the How To Tab!
 
-  let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function
-
+   
+  let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function used for volume change!
 /**
  * Music player for buttons onclick functionality
  */
@@ -24,9 +24,12 @@ function playMusic(musicId) {
     let toggleMusic = document.getElementById(musicId);
     currentMusic = musicId; // Set whats playing to and external variable!
     return toggleMusic.paused ? toggleMusic.play() : toggleMusic.pause();
-
 }
 
+
+/**
+ * VoluMe functionality for the player!
+ */
 function changeBckTrkVol(volume) {
     const volumeValue = volume / 100;
     const getMusic = document.getElementById(currentMusic);
@@ -49,10 +52,14 @@ function updateVolume(volume) {
     }
   }
 
+// Key click play functions
+  
+// Add a keydown event listener to the window and call the keyPlay function
+window.addEventListener('keydown', keyPlay);
 
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function
 function clickPlay(audioIn) {
-    const audio = document.querySelector(`audio[data-key="${audioIn}"]`);  // Find the audio element with the corresponding data-key attribute
+    const audio = document.querySelector(`audio[data-key='${audioIn}']`);  // Find the audio element with the corresponding data-key attribute
 
     // Get the DOM elements for displaying the current key and sound name
     const currentKey = document.getElementById('key-press');
@@ -73,7 +80,7 @@ function keyPlay(event) {
     const soundNameElement = document.getElementById('sound-played');
 
     // Find the audio element with the corresponding data-key attribute based on the event's keyCode
-    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const audio = document.querySelector(`audio[data-key='${event.keyCode}']`);
 
     // If statement to check if an audio element with the specified data-key exists
     if (audio) {
@@ -87,13 +94,11 @@ function keyPlay(event) {
       soundNameElement.innerHTML = `Sorry ${event.key} doesn't have a sound`;
     }
   }
-  
-  // Add a keydown event listener to the window and call the keyPlay function
-  window.addEventListener('keydown', keyPlay);
 
 // 
 //    Trying to get this sequencer to work!
 //  
+
 const sequencers = document.querySelectorAll('.sequencer'); // selects all the elements with the class name of sequencer.
 const playButton = document.getElementById('play-btn'); // selects the play button
 const kickSound = document.getElementById('kick-sound'); // Adds the sound that i want to use!  (ToDo: Make it reusable for other sounds and more sequencers!!)
