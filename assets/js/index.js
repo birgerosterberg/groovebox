@@ -136,8 +136,8 @@ sequencers.forEach((sequencer) => {
 playButton.addEventListener('click', togglePlayback);
 
 function toggleSequencer() {
-  this.classList.toggle('active');   // Toggle the 'active' class on the sequencer
-  this.style.backgroundColor = this.classList.contains('active') ? 'green' : '#eaeaea'; // Update the background color based on the 'active' class
+  this.classList.toggle('bactive');   // Toggle the 'active' class on the sequencer
+  // this.style.backgroundColor = this.classList.contains('bactive') ? 'green' : '#eaeaea'; // Update the background color based on the 'active' class
 }
 
 function togglePlayback() {
@@ -157,7 +157,7 @@ function togglePlayback() {
 function playActiveSequencers() {
   // Iterates over the sequencer and checcks if it is active or not!, ToDO: (Add a opacity or something to show which step the sequencer is playing!)
   sequencers.forEach((sequencer, i) => {
-    if (i === currentStep && sequencer.classList.contains('active')) {
+    if (i === currentStep && sequencer.classList.contains('bactive')) {
       // Play the kick sound for the active part! ToDO (Make this reusable for other sounds!)
       kickSound.play();
       // Need to find out how to make it add this on steps that aint active also...
