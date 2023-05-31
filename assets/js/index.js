@@ -1,4 +1,5 @@
 // Page Tabs!
+
 function changeTab(tabIndex) {
     const tabs = document.getElementsByClassName('tab');
     const contents = document.getElementsByClassName('content');
@@ -74,22 +75,34 @@ function clickPlay(audioIn) {
   }
 
 // Keydown functions! Takes the data-keyCode info and makes sure it plays the right sound!
-function keyPlay(event) {
+
+  function keyPlay(event) {
     // Get the DOM elements for displaying the current key and sound name
     const currentKey = document.getElementById('key-press');
     const soundNameElement = document.getElementById('sound-played');
-
+  
     // Find the audio element with the corresponding data-key attribute based on the event's keyCode
     const audio = document.querySelector(`audio[data-key='${event.keyCode}']`);
-
-    // If statement to check if an audio element with the specified data-key exists
+  
+    // Find the button element with the corresponding data-key attribute based on the event's keyCode
+    const button = document.querySelector(`button[data-key='${event.keyCode}']`);
+  
+    // If statement to check if an audio element and a button element with the specified data-key exist
     if (audio) {
       audio.play(); // Play the audio if it exists
+  
       const soundName = audio.getAttribute('data-name'); // Get the data-name attribute value of the audio element
       currentKey.innerHTML = event.key; // Update the current key element with the pressed key
       soundNameElement.innerHTML = soundName; // Update the sound name element with the name of the sound played
+  
+      button.classList.add('bactive'); // Add the "bactive" class to the button
+  
+    // Remove the "bactive" class after a certain duration with a function
+    setTimeout(function() {
+      button.classList.remove('bactive');
+    }, 200);
     } else {
-      // Display a message if no audio element with the specified data-key is found
+      // Display a message if no audio element or button element with the specified data-key is found
       currentKey.innerHTML = `Sorry ${event.key} is not used`;
       soundNameElement.innerHTML = `Sorry ${event.key} doesn't have a sound`;
     }

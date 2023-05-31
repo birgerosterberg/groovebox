@@ -32,14 +32,19 @@ button {
 }
 
 button:active {
-  /* background: rgb(82, 186, 52); */
   background: radial-gradient(
     circle,
     rgba(55, 255, 0, 0.8) 0%,
     rgba(142, 121, 62, 1) 70%
   );
 }
-
+.bactive {
+  background: radial-gradient(
+    circle,
+    rgba(55, 255, 0, 0.8) 0%,
+    rgba(142, 121, 62, 1) 70%
+  );
+}
 /*  Tabs section styles! */
 .tab-container {
   display: flex;

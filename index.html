@@ -48,16 +48,21 @@
                              from the audio in the function clickPlay('insert number here') 
                         -->
                         <div class="pad-container">
-                            <button class="pad" onclick="clickPlay(65)">Kick <p><kbd>A</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(83)">Open HiHat <p><kbd>S</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(68)">Clap <p><kbd>D</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(70)">Mid Perc <p><kbd>F</kbd></p> </button>
+                            <button class="pad" data-key="65" onclick="clickPlay(65)">Kick <p><kbd>A</kbd></p></button>
+                            <button class="pad" data-key="83" onclick="clickPlay(83)">Open HiHat <p><kbd>S</kbd></p>
+                            </button>
+                            <button class="pad" data-key="68" onclick="clickPlay(68)">Clap <p><kbd>D</kbd></p></button>
+                            <button class="pad" data-key="70" onclick="clickPlay(70)">Mid Perc <p><kbd>F</kbd></p>
+                            </button>
                         </div>
                         <div class="pad-container">
-                            <button class="pad" onclick="clickPlay(72)">Low Perc <p><kbd>H</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(74)">Shaker <p><kbd>J</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(75)">Closed HiHat <p><kbd>K</kbd></p> </button>
-                            <button class="pad" onclick="clickPlay(76)">Snare <p><kbd>L</kbd></p> </button>
+                            <button class="pad" data-key="72" onclick="clickPlay(72)">Low Perc <p><kbd>H</kbd></p>
+                            </button>
+                            <button class="pad" data-key="74" onclick="clickPlay(74)">Shaker <p><kbd>J</kbd></p>
+                            </button>
+                            <button class="pad" data-key="75" onclick="clickPlay(75)">Closed HiHat <p><kbd>K</kbd></p>
+                            </button>
+                            <button class="pad" data-key="76" onclick="clickPlay(76)">Snare <p><kbd>L</kbd></p></button>
                         </div>
                     </div>
                     <!-- Information about the key pressed and the sound played! -->
