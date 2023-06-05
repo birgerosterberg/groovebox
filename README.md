@@ -46,3 +46,5 @@ Instead of having play / pause button i made toggle for music playback.
 Added if check if audio is found or not because it was giving error message in the consle when i i pressed a key that didnt exist else!
 
 Using data-key function for the pad sample player so i can reuse the function and i only have to give the onclick the same number as the data-key that i use for the "keyPlay" function. Reusing as much as possible!
+
+When pressing Reset button due to both the Loop and Backing Tracks play music with the same function they disturb eachother... Have to make my own functions for each of them to work properly.

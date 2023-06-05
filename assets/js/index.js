@@ -26,7 +26,7 @@ function playMusic(event, musicId) {
     let toggleMusic = document.getElementById(musicId);
     const button = event.target;
     currentLoop = musicId; // Added to try and fix a bugg, still not perfect!
-    currentMusic = musicId; // Set whats playing to and external variable!
+    currentMusic = musicId; // Set whats playing to an external variable!
 
     if (toggleMusic.paused) {
       toggleMusic.play();
@@ -41,6 +41,24 @@ function playMusic(event, musicId) {
     if (currentLoop) {
       let toggleLoop = document.getElementById(currentLoop);
       toggleLoop.currentTime = 0;
+    }
+  }
+let repeatEnabled = false;
+
+function repeatLoop(event, loopId) {
+    let toggleLoop = document.getElementById(loopId);
+    const button = event.target;
+  
+    currentLoop = loopId; // Set what's playing to an external variable!
+  
+    if (!repeatEnabled) {
+      toggleLoop.loop = true; // Enable looping
+      repeatEnabled = true;
+      button.classList.add('bactive'); // Add the "bactive" class when repeat is enabled
+    } else {
+      toggleLoop.loop = false; // Disable looping
+      repeatEnabled = false;
+      button.classList.remove('bactive'); // Remove the "bactive" class when repeat is disabled
     }
   }
 
