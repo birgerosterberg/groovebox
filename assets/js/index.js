@@ -18,13 +18,14 @@ function changeTab(tabIndex) {
 
    
   let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function used for volume change!
-/**
+  let currentLoop = null; // keeping track of the current loop!
+  /**
  * Music player for buttons onclick functionality
  */
 function playMusic(event, musicId) {
     let toggleMusic = document.getElementById(musicId);
     const button = event.target;
-
+    currentLoop = musicId; // Added to try and fix a bugg, still not perfect!
     currentMusic = musicId; // Set whats playing to and external variable!
 
     if (toggleMusic.paused) {
@@ -35,7 +36,13 @@ function playMusic(event, musicId) {
       button.classList.remove('bactive'); // Remove the "bactive" class when paused
     }
   }
-
+  // Reset the currentMusic variable so that it can be started again from the beginning!
+  function resetLoop() {
+    if (currentLoop) {
+      let toggleLoop = document.getElementById(currentLoop);
+      toggleLoop.currentTime = 0;
+    }
+  }
 
 /**
  * VoluMe functionality for the player!
@@ -164,7 +171,7 @@ function togglePlayback() {
 
 // this part of the code checks if the sequencer at the current step is active and plays the kick sound
 function playActiveSequencers() {
-  // Iterates over the sequencer and checcks if it is active or not!, ToDO: (Add a opacity or something to show which step the sequencer is playing!)
+  // Iterates over the sequencer and checks if it is active or not!
   sequencers.forEach((sequencer, i) => {
     if (i === currentStep && sequencer.classList.contains('bactive')) {
       // Play the kick sound for the active part! ToDO (Make this reusable for other sounds!)
@@ -180,6 +187,6 @@ function playActiveSequencers() {
   currentStep = (currentStep + 1) % sequencers.length;
 
   if (isPlaying) {
-    setTimeout(playActiveSequencers, 500); // Add a delay between each step ToDo: (add choices to change the BPM!)
+    setTimeout(playActiveSequencers, 200); // Add a delay between each step ToDo: (add choices to change the BPM!)
   }
 }
