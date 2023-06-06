@@ -17,6 +17,7 @@ body {
 h1 {
   font-family: "Playfair Display", serif;
   font-size: 40px;
+  margin: 0;
 }
 
 button {
@@ -85,17 +86,13 @@ button:active {
   align-items: center;
   justify-content: center;
 }
+/* Reusable flex container with row */
+
 .container-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-/* Header sections */
-.header-row {
-  flex-wrap: wrap;
-  font-size: 10px;
-  justify-content: space-around;
 }
 
 /* Volume designs! */
@@ -121,11 +118,18 @@ button:active {
 }
 /* Drum Machine Styles! */
 .pad-container {
-  text-align: center;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
 }
 .pad {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+}
+.pad-container button p,
+kbd {
+  margin: 0;
+  background-color: green;
 }
 /* Sequencer Styles! */
 #key-press {

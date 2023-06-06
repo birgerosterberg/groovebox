@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="container-row header-row">
+        <div class="container-col">
             <div>
                 <h1>Groove Box</h1>
             </div>
@@ -22,11 +22,9 @@
     </header>
     <!-- Main section of it all -->
     <main>
+        <!-- Menu navigation aka Tabs -->
         <div class="tabs">
             <div class="tab-container">
-                <div class="tab" onclick="changeTab(4)">
-                    <p>HowTo</p>
-                </div>
                 <div class="tab" onclick="changeTab(0)">
                     <p>Drum Machine</p>
                 </div>
@@ -158,9 +156,6 @@
                         <input type="range" class="masterVol" name="volume-back" min="0" max="100" value="50"
                             oninput="changeBckTrkVol(this.value)">
                     </div>
-                </div>
-                <div class="content">
-                    <h2>How To use this?!</h2>
                 </div>
             </div>
         </div>

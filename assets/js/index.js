@@ -14,7 +14,7 @@ function changeTab(tabIndex) {
   tabs[tabIndex].classList.add("tabActive");
   contents[tabIndex].classList.add("tabActive");
 }
-changeTab(4); // Make sure the initial tab is the How To Tab!
+changeTab(0); // Make sure the initial tab is the How To Tab!
 
 let currentMusic = null; // Variable to transfer what is currently playing from the playMusic function used for volume change!
 let currentLoops = {}; // Object to store the currently playing loops
@@ -175,7 +175,6 @@ playButton.addEventListener("click", togglePlayback);
 
 function toggleSequencer() {
   this.classList.toggle("bactive"); // Toggle the 'active' class on the sequencer
-  // this.style.backgroundColor = this.classList.contains('bactive') ? 'green' : '#eaeaea'; // Update the background color based on the 'active' class
 }
 
 function togglePlayback() {
@@ -192,17 +191,15 @@ function togglePlayback() {
 }
 
 // this part of the code checks if the sequencer at the current step is active and plays the kick sound
+
 function playActiveSequencers() {
   // Iterates over the sequencer and checks if it is active or not!
   sequencers.forEach((sequencer, i) => {
     if (i === currentStep && sequencer.classList.contains("bactive")) {
       // Play the kick sound for the active part! ToDO (Make this reusable for other sounds!)
       kickSound.play();
-      // Need to find out how to make it add this on steps that aint active also...
-      sequencer.style.opacity = "0.5"; // Change opacity to the step playing.
-    } else {
-      sequencer.style.opacity = "1"; // Change back opacity...
     }
+    sequencer.style.opacity = i === currentStep ? "0.5" : "1"; // Change opacity for the current step
   });
 
   // Move to the next step in the sequencer loop
