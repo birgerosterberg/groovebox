@@ -103,6 +103,14 @@ function updateVolumeStatus(volume) {
   const volumeStatusElement = document.getElementById("volume-status");
   volumeStatusElement.textContent = `Volume: ${volume}%`; // Update the text content of the volume status paragraph with the new volume value
 }
+/** Pause function */
+// Function to pause all audio elements
+function pauseAllAudio() {
+  const audioElements = document.getElementsByTagName("audio");
+  for (let i = 0; i < audioElements.length; i++) {
+    audioElements[i].pause(); // Pause the audio element
+  }
+}
 
 /**  Key click play functions */
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function
