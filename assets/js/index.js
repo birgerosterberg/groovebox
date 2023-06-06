@@ -70,30 +70,41 @@ function toggleRepeat(event, musicId) {
 /**
  * VoluMe functionality for the player!
  */
-function changeBckTrkVol(volume) {
-  const volumeValue = volume / 100;
-  const getMusic = document.getElementById(currentMusic);
-
-  if (getMusic) {
-    getMusic.volume = volumeValue;
-  }
-}
-
-// Volume Slider function, changes all volume!
-function updateVolume(volume) {
-  const volumeValue = volume / 100;
-
-  // Get all audio elements
+// Function to increase the volume for all audio tracks with the use of buttons!
+function increaseVolume() {
   const audioElements = document.getElementsByTagName("audio");
-
-  // Set the volume for each audio element
   for (let i = 0; i < audioElements.length; i++) {
-    audioElements[i].volume = volumeValue;
+    if (audioElements[i].volume < 1.0) {
+      // Increase the volume by 0.1 and round down to two decimal places
+      audioElements[i].volume =
+        Math.floor((audioElements[i].volume + 0.1) * 100) / 100;
+      // Update the volume status
+      updateVolumeStatus(audioElements[i].volume * 100);
+    }
   }
 }
 
-// Key click play functions
+// Function to decrease the volume for all audio tracks with the use of buttons!
+function decreaseVolume() {
+  const audioElements = document.getElementsByTagName("audio");
+  for (let i = 0; i < audioElements.length; i++) {
+    if (audioElements[i].volume > 0.0) {
+      // Decrease the volume by 0.1 and round down to two decimal places
+      audioElements[i].volume =
+        Math.floor((audioElements[i].volume - 0.1) * 100) / 100;
+      // Update the volume status
+      updateVolumeStatus(audioElements[i].volume * 100);
+    }
+  }
+}
 
+// Function to update the volume status paragraph
+function updateVolumeStatus(volume) {
+  const volumeStatusElement = document.getElementById("volume-status");
+  volumeStatusElement.textContent = `Volume: ${volume}%`; // Update the text content of the volume status paragraph with the new volume value
+}
+
+/**  Key click play functions */
 // Onclick audio function, takes the data-key from the audio and adds it when clicked from the onclick function
 function clickPlay(event, audioIn) {
   const audio = document.querySelector(`audio[data-key='${audioIn}']`); // Find the audio element with the corresponding data-key attribute

@@ -22,6 +22,7 @@ h1 {
   font-family: "Playfair Display", serif;
   font-size: 40px;
   margin: 0;
+  padding: 5px;
 }
 
 button {
@@ -55,6 +56,7 @@ button:active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 10px 0 10px 0;
 }
 .tab {
   cursor: pointer;
@@ -99,22 +101,21 @@ button:active {
   justify-content: center;
 }
 
-/* Volume designs! */
-.masterVol {
-  -webkit-appearance: none;
-  cursor: pointer;
-  background-color: #8e793e;
-  width: 75px;
-  height: 5px;
-  border-radius: 5px;
+#top-menu {
+  display: flex;
+  flex-direction: row;
 }
-.masterVol::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #ad974f;
-  width: 10px;
-  height: 20px;
-  border-radius: 5px;
-  border: 0.5px solid #eaeaea;
+/* Volume designs! */
+#volume-status {
+  font-size: 12px;
+  margin: 0;
+  padding: 5px;
+}
+.master-vol-btn {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 0;
 }
 /* Playstatus  on things*/
 .play-status {

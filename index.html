@@ -13,11 +13,26 @@
             <div>
                 <h1>Groove Box</h1>
             </div>
-            <div class="container-col">
-                <p>Master Volume</p>
-                <input type="range" class="masterVol" name="volume" min="0" max="100" value="50"
-                    oninput="updateVolume(this.value)">
+            <div id="top-menu">
+                <div>
+                    <div class="container-col">
+                        <div>
+                            <button>HowTo</button>
+                        </div>
+                        <div>
+                            <button>Pause All</button>
+                        </div>
+                    </div>
+                    <div class="container-col">
+                        <p id="volume-status">Volume: 100%</p>
+                        <div class="container-row">
+                            <button onclick="increaseVolume()" class="master-vol-btn">+</button>
+                            <button onclick="decreaseVolume()" class="master-vol-btn">-</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </header>
     <!-- Main section of it all -->
@@ -175,10 +190,6 @@
                         <div>
                             <button class="play-status" onclick="playMusic(event, 'reggae')">Reggae</button>
                         </div>
-                    </div>
-                    <div>
-                        <input type="range" class="masterVol" name="volume-back" min="0" max="100" value="50"
-                            oninput="changeBckTrkVol(this.value)">
                     </div>
                 </div>
             </div>
