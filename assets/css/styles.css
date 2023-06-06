@@ -23,7 +23,7 @@ h1 {
 button {
   background-color: #ad974f;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #eaeaea;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -129,8 +129,9 @@ button:active {
 .pad-container button p,
 kbd {
   margin: 0;
-  background-color: green;
+  font-weight: bolder;
 }
+
 /* Sequencer Styles! */
 #key-press {
   font-style: capitalize;
@@ -159,4 +160,11 @@ kbd {
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Loops Styles */
+
+.btn-rr {
+  height: 37.5px;
+  width: 65px;
 }
