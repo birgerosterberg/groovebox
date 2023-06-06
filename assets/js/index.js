@@ -162,7 +162,7 @@ function keyPlay(event) {
   } else {
     // Display a message if no audio element or button element with the specified data-key is found
     currentKey.innerHTML = `Sorry ${event.key} is not used`;
-    soundNameElement.innerHTML = `Sorry ${event.key} doesn't have a sound`;
+    soundNameElement.innerHTML = `No sound on ${event.key}`;
   }
 }
 

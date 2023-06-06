@@ -92,8 +92,8 @@ button:active {
   align-items: center;
   justify-content: center;
 }
-/* Reusable flex container with row */
 
+/* Reusable flex container with row */
 .container-row {
   display: flex;
   flex-direction: row;
@@ -101,15 +101,18 @@ button:active {
   justify-content: center;
 }
 
-#top-menu {
+.top-menu {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2.5px;
 }
 /* Volume designs! */
 #volume-status {
   font-size: 12px;
   margin: 0;
   padding: 5px;
+  width: 80px;
 }
 .master-vol-btn {
   width: 30px;
