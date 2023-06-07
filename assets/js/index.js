@@ -67,6 +67,8 @@ function toggleRepeat(event, musicId) {
   }
 }
 
+// Menu section of code!
+
 /**
  * VoluMe functionality for the player!
  */
@@ -111,7 +113,7 @@ function pauseAllAudio() {
   for (let i = 0; i < audioElements.length; i++) {
     audioElements[i].pause(); // Pause the audio element
   }
-
+  // Used to pause the Sequencer!
   if (isPlaying) {
     isPlaying = !isPlaying;
     playButton.textContent = "Play"; // Changes the text to Pause if its playing
@@ -234,3 +236,25 @@ function playActiveSequencers() {
     setTimeout(playActiveSequencers, 200); // Add a delay between each step ToDo: (add choices to change the BPM!)
   }
 }
+
+/** Modal part of the code */
+const modal = document.getElementById("modal"); // Get the modal element
+
+const openModalBtn = document.getElementById("openModalBtn"); // Get the button that opens the modal
+
+const closeModalBtn = document.querySelector(".close"); // Get the close button element
+
+// Function to open the modal
+
+const openModal = () => {
+  modal.style.display = "block";
+};
+
+// Function to close the modal
+const closeModal = () => {
+  modal.style.display = "none";
+};
+
+openModalBtn.addEventListener("click", openModal); // Event listener to open the modal when the button is clicked
+
+closeModalBtn.addEventListener("click", closeModal); // Event listener to close the modal when the close button is clicked

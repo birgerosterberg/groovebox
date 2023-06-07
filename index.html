@@ -17,7 +17,42 @@
                 <div class="container-row top-menu">
                     <div class="container-col">
                         <div>
-                            <button class="menu-btn">HowTo</button>
+                            <button class="menu-btn" id="openModalBtn">How To</button>
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2>How To</h2>
+                                    <h3>Menu</h3>
+                                    <ul>
+                                        <li>Base volume = 0%, you have to change it to hear sound.</li>
+                                        <li>+ and - buttons changes the volume of the Groove Box.</li>
+                                        <li>Pause All audio playing on the Groove Box.</li>
+                                    </ul>
+                                    <h3>Drum Machine</h3>
+                                    <ul>
+                                        <li>Click / Touch one of the buttons.</li>
+                                        <li>Press the Key on the sound you want on your keyboard.</li>
+                                    </ul>
+                                    <h3>Sequencer</h3>
+                                    <ul>
+                                        <li>Add steps to the sequencer by clicking / touching the boxes.</li>
+                                        <li>To play the sequence press Play.</li>
+                                        <li>The steps marked green will play a sound.</li>
+                                    </ul>
+                                    <h3>Loops</h3>
+                                    <ul>
+                                        <li>To play a loop click / touch the box.</li>
+                                        <li>When green it is playing.</li>
+                                        <li>To repeat the sound press the <span>Repeat</span> button it will turn green.
+                                        </li>
+                                        <li>To reset a loop to the start press <span>Reset</span>.</li>
+                                    </ul>
+                                    <h3>Backing Tracks</h3>
+                                    <ul>
+                                        <li>Press a box to play, it turns green to show its active.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <button class="menu-btn" onclick="pauseAllAudio()">Pause All</button>
@@ -187,9 +222,9 @@
                             Where u chose what type of music u want to drum to section 
                             Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
                             -->
-                        <button>Jazz</button>
+                        <button class="bcktrk">Jazz</button>
                         <div>
-                            <button class="play-status" onclick="playMusic(event, 'reggae')">Reggae</button>
+                            <button class="bcktrk" onclick="playMusic(event, 'reggae')">Reggae</button>
                         </div>
                     </div>
                 </div>
@@ -212,9 +247,6 @@
     <audio src="assets/sounds/loops/warm-breeze-calm-lo-fi-brass.mp3" type="audio/mp3" id="warmbreeze"></audio>
     <audio src="assets/sounds/loops/wide-arpeggiated-piano-and-guitar-melody.mp3" type="audio/mp3"
         id="widearppiano"></audio>
-
-
-
 
     <!-- End of Loop Sounds -->
 

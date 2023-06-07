@@ -112,7 +112,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio \
 https://www.toptal.com/developers/keycode \
 Keyboard Events from Code Institute Course! \
 Adding Event Listeners from Code Institute Course! \
-https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript
+https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript \
+https://www.w3schools.com/howto/howto_css_modals.asp
 
 Ive probably spent a few to many hours reading and searching for solutions on StackOverflow. \
 https://www.stackoverflow.com/
