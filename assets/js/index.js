@@ -72,6 +72,14 @@ function toggleRepeat(event, musicId) {
 /**
  * VoluMe functionality for the player!
  */
+// Set the initial volume for all audio elements to 0 when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  const audioElements = document.getElementsByTagName("audio");
+  for (let i = 0; i < audioElements.length; i++) {
+    audioElements[i].volume = 0;
+  }
+});
+
 // Function to increase the volume for all audio tracks with the use of buttons!
 function increaseVolume() {
   const audioElements = document.getElementsByTagName("audio");
@@ -233,7 +241,7 @@ function playActiveSequencers() {
   currentStep = (currentStep + 1) % sequencers.length;
 
   if (isPlaying) {
-    setTimeout(playActiveSequencers, 200); // Add a delay between each step ToDo: (add choices to change the BPM!)
+    setTimeout(playActiveSequencers, 300); // Add a delay between each step ToDo: (add choices to change the BPM!)
   }
 }
 

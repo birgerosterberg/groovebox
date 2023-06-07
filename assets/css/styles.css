@@ -229,7 +229,9 @@ kbd {
   text-decoration: none;
   cursor: pointer;
 }
-
+.modal-content h2 {
+  text-align: center;
+}
 .modal-content h3 {
   text-decoration: underline;
   font-weight: bold;
