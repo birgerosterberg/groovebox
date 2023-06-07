@@ -22,11 +22,13 @@
                     <div class="container-col">
                         <div>
                             <!-- How To Modal! -->
-                            <button class="menu-btn" id="openModalBtn"
-                                aria-label="Button to the How to use Document(Opens as modal)">How To</button>
+                            <button class="menu-btn" id="openModalBtn" accesskey="h"
+                                aria-label="Button to the How to use (Opens as modal with ALT + H)">How
+                                To</button>
                             <div id="modal" class="modal">
                                 <div class="modal-content">
-                                    <span class="close" aria-label="Button to close the Modal">&times;</span>
+                                    <span class="close"
+                                        aria-label="Button to close the Modal(Escape key)">&times;</span>
                                     <h2>How To</h2>
                                     <h3>Menu</h3>
                                     <ul>
@@ -96,16 +98,20 @@
             <!-- Menu navigation aka Tabs -->
             <div class="tabs">
                 <div class="tab-container">
-                    <div aria-label="Change to the Drum Machine" class="tab" onclick="changeTab(0)">
+                    <div tabindex="0" accesskey="1" aria-label="Change to the Drum Machine(alt + 1)" class="tab"
+                        onclick="changeTab(0)">
                         <p>Drum Machine</p>
                     </div>
-                    <div aria-label="Change to the Sequencer" class="tab" onclick="changeTab(1)">
+                    <div tabindex="0" accesskey="2" aria-label="Change to the Sequencer(alt + 2)" class="tab"
+                        onclick="changeTab(1)">
                         <p>Sequencer</p>
                     </div>
-                    <div aria-label="Change to the Loops" class="tab" onclick="changeTab(2)">
+                    <div tabindex="0" accesskey="3" aria-label="Change to the Loops(alt + 3)" class="tab"
+                        onclick="changeTab(2)">
                         <p>Loops</p>
                     </div>
-                    <div aria-label="Change to the Backing Tracks" class="tab" onclick="changeTab(3)">
+                    <div tabindex="0" accesskey="4" aria-label="Change to the Backing Tracks(alt + 4)" class="tab"
+                        onclick="changeTab(3)">
                         <p>Backing tracks</p>
                     </div>
                 </div>
@@ -117,34 +123,42 @@
                              from the audio in the function clickPlay('insert number here') 
                         -->
                             <div class="pad-container">
-                                <button class="pad" data-key="65" onclick="clickPlay(event, 65)">Kick <p><kbd>A</kbd>
+                                <button class="pad" data-key="65" onclick="clickPlay(event, 65)" role="button"
+                                    aria-label="Kick">Kick <p><kbd>A</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="83" onclick="clickPlay(event, 83)">Open HiHat <p>
+                                <button class="pad" data-key="83" onclick="clickPlay(event, 83)" role="button"
+                                    aria-label="Open HiHat">Open HiHat <p>
                                         <kbd>S</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="68" onclick="clickPlay(event, 68)">Clap <p><kbd>D</kbd>
+                                <button class="pad" data-key="68" onclick="clickPlay(event, 68)" role="button"
+                                    aria-label="Clap">Clap <p><kbd>D</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="70" onclick="clickPlay(event, 70)">Mid Perc <p>
+                                <button class="pad" data-key="70" onclick="clickPlay(event, 70)" role="button"
+                                    aria-label="Mid Perc">Mid Perc <p>
                                         <kbd>F</kbd>
                                     </p>
                                 </button>
                             </div>
                             <div class="pad-container">
-                                <button class="pad" data-key="72" onclick="clickPlay(event, 72)">Low Perc <p>
+                                <button class="pad" data-key="72" onclick="clickPlay(event, 72)" role="button"
+                                    aria-label="Low Perc">Low Perc <p>
                                         <kbd>H</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="74" onclick="clickPlay(event, 74)">Shaker <p><kbd>J</kbd>
+                                <button class="pad" data-key="74" onclick="clickPlay(event, 74)" role="button"
+                                    aria-label="Shaker">Shaker <p><kbd>J</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="75" onclick="clickPlay(event, 75)">Closed HiHat <p>
+                                <button class="pad" data-key="75" onclick="clickPlay(event, 75)" role="button"
+                                    aria-label="Closed HiHat">Closed HiHat <p>
                                         <kbd>K</kbd>
                                     </p>
                                 </button>
-                                <button class="pad" data-key="76" onclick="clickPlay(event, 76)">Snare <p><kbd>L</kbd>
+                                <button class="pad" data-key="76" onclick="clickPlay(event, 76)" role="button"
+                                    aria-label="Snare">Snare <p><kbd>L</kbd>
                                     </p>
                                 </button>
                             </div>
@@ -160,85 +174,93 @@
                             <button aria-label="Play the sequencer" id="play-btn">Play</button>
 
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 1"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 2"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 3"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 4"></div>
                             </div>
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 5"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 6"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 7"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 8"></div>
                             </div>
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 9"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 10"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 11"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 12"></div>
                             </div>
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 13"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 14"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 15"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 16"></div>
                             </div>
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 17"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 18"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 19"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 20"></div>
                             </div>
                             <div class="seq-blocks">
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
-                                <div class="sequencer"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 21"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 22"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 23"></div>
+                                <div class="sequencer" role="button" tabindex="0" aria-label="Sequencer Block 24"></div>
                             </div>
                         </div>
                     </div>
                     <div class="content">
                         <div class="container-col">
                             <div class="container-row">
-                                <button class="pad" onclick="playMusic(event, 'cinemachord')">Cinematic
-                                    Chord</button>
+                                <button class="pad" onclick="playMusic(event, 'cinemachord')"
+                                    aria-label="Play Cinematic Chord">Cinematic Chord</button>
                                 <div class="container-col">
-                                    <button class="btn-rr" onclick="toggleRepeat(event, 'cinemachord')">Repeat</button>
-                                    <button class="btn-rr" onclick="resetLoop('cinemachord')">Reset</button>
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'cinemachord')"
+                                        aria-label="Toggle Repeat for Cinematic Chord">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('cinemachord')"
+                                        aria-label="Reset Loop for Cinematic Chord">Reset</button>
                                 </div>
                             </div>
                             <div class="container-row">
-                                <button class="pad" onclick="playMusic(event, 'dreamygc')">Dreamy Guitar
-                                    Chords</button>
+                                <button class="pad" onclick="playMusic(event, 'dreamygc')"
+                                    aria-label="Play Dreamy Guitar Chords">Dreamy Guitar Chords</button>
                                 <div class="container-col">
-                                    <button class="btn-rr" onclick="toggleRepeat(event, 'dreamygc')">Repeat</button>
-                                    <button class="btn-rr" onclick="resetLoop('dreamygc')">Reset</button>
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'dreamygc')"
+                                        aria-label="Toggle Repeat for Dreamy Guitar Chords">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('dreamygc')"
+                                        aria-label="Reset Loop for Dreamy Guitar Chords">Reset</button>
                                 </div>
                             </div>
                             <div class="container-row">
-                                <button class="pad" onclick="playMusic(event, 'warmbreeze')">Warm Breeze
-                                    Lo-Fi</button>
+                                <button class="pad" onclick="playMusic(event, 'warmbreeze')"
+                                    aria-label="Play Warm Breeze Lo-Fi">Warm Breeze Lo-Fi</button>
                                 <div class="container-col">
-                                    <button class="btn-rr" onclick="toggleRepeat(event, 'warmbreeze')">Repeat</button>
-                                    <button class="btn-rr" onclick="resetLoop('warmbreeze')">Reset</button>
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'warmbreeze')"
+                                        aria-label="Toggle Repeat for Warm Breeze Lo-Fi">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('warmbreeze')"
+                                        aria-label="Reset Loop for Warm Breeze Lo-Fi">Reset</button>
                                 </div>
                             </div>
                             <div class="container-row">
-                                <button class="pad" onclick="playMusic(event, 'widearppiano')">Wide Arp
-                                    Piano
-                                    &
-                                    Guitar</button>
+                                <button class="pad" onclick="playMusic(event, 'widearppiano')"
+                                    aria-label="Play Wide Arp Piano & Guitar">Wide Arp Piano & Guitar</button>
                                 <div class="container-col">
-                                    <button class="btn-rr" onclick="toggleRepeat(event, 'widearppiano')">Repeat</button>
-                                    <button class="btn-rr" onclick="resetLoop('widearppiano')">Reset</button>
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'widearppiano')"
+                                        aria-label="Toggle Repeat for Wide Arp Piano & Guitar">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('widearppiano')"
+                                        aria-label="Reset Loop for Wide Arp Piano & Guitar">Reset</button>
                                 </div>
                             </div>
                             <div class="container-row">
-                                <button class="pad" onclick="playMusic(event, 'spaceychord')">Spacey
-                                    Chords</button>
+                                <button class="pad" onclick="playMusic(event, 'spaceychord')"
+                                    aria-label="Play Spacey Chords">Spacey Chords</button>
                                 <div class="container-col">
-                                    <button class="btn-rr" onclick="toggleRepeat(event, 'spaceychord')">Repeat</button>
-                                    <button class="btn-rr" onclick="resetLoop('spaceychord')">Reset</button>
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'spaceychord')"
+                                        aria-label="Toggle Repeat for Spacey Chords">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('spaceychord')"
+                                        aria-label="Reset Loop for Spacey Chords">Reset</button>
                                 </div>
                             </div>
                         </div>
@@ -249,9 +271,13 @@
                             Where u chose what type of music u want to drum to section 
                             Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
                             -->
-                            <button class="bcktrk">Jazz</button>
                             <div>
-                                <button class="bcktrk" onclick="playMusic(event, 'reggae')">Reggae</button>
+                                <button class="bcktrk" onclick="playMusic(event, 'funk')"
+                                    aria-label="Toggle Play / Pause Funk track">Jazz</button>
+                            </div>
+                            <div>
+                                <button class="bcktrk" onclick="playMusic(event, 'reggae')"
+                                    aria-label="Toggle Play / Pause Reggae track">Reggae</button>
                             </div>
                         </div>
                     </div>
@@ -261,6 +287,7 @@
     </main>
     <!-- Audio files! -->
     <!-- Backing tracks! -->
+    <audio src="assets/sounds/bcktrk/funk.mp3" type="audio/mp3" id="funk"></audio>
 
     <audio src="assets/sounds/bcktrk/reggae.mp3" type="audio/mp3" id="reggae"></audio>
 

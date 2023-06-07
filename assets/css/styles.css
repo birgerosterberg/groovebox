@@ -133,20 +133,22 @@ a:visited {
 }
 .menu-btn {
   width: 80px;
-  height: 25px;
+  height: 48px;
+  font-size: 18px;
 }
 /* Volume designs! */
 #volume-status {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 5px;
   width: 80px;
   color: #eaeaea;
 }
 .master-vol-btn {
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   padding: 5px;
+  font-size: 20px;
   margin: 0;
 }
 /* Playstatus  on things*/

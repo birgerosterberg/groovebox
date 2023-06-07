@@ -266,3 +266,10 @@ const closeModal = () => {
 openModalBtn.addEventListener("click", openModal); // Event listener to open the modal when the button is clicked
 
 closeModalBtn.addEventListener("click", closeModal); // Event listener to close the modal when the close button is clicked
+
+// Event listener to close the modal when the Escape key is pressed, for aria functionality!
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});

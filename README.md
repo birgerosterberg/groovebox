@@ -25,13 +25,19 @@ https://cssgradient.io/ \
 Box Shadows from: \
 https://getcssscan.com/css-box-shadow-examples
 
-### Wireframe
+## Wireframe
+
+This marks the beginning of my project, which has undergone significant evolution since its initial wireframe stage. Unfortunately, my trial period for Balsamiq expired, preventing me from creating an updated wireframe reflecting the final result. Nonetheless, this initial wireframe provides a glimpse into my original vision. Now, you can experience the complete product and witness how it has expanded beyond its initial concept. It serves as a testament to its origins while showcasing the complexities it has since embraced.
+
+![wireframe sketch](assets/readme/wirefram-start.png)
+
+---
 
 ## Features
 
 ---
 
-### Header / Logo
+### **Header / Logo**
 
 I have implemented a basic h1 header as the logo, featuring a sleek and elegant design. The header incorporates a background image of a soundwave, adding a touch of visual appeal to the overall aesthetic.
 
@@ -39,7 +45,7 @@ I have implemented a basic h1 header as the logo, featuring a sleek and elegant 
 
 ---
 
-### Menu
+### **Menu**
 
 I've added a menu at the top of the groove box with a "How To" section for instructions and a pause button to stop all active audio. It also includes a volume control with a text display showing the percentage and + / - buttons for 10% adjustments. This menu enhances usability and offers quick access to important features for an improved user experience.
 
@@ -50,7 +56,7 @@ The How To is also where i decided to put what usually is footer content with in
 
 ---
 
-### Navigation
+### **Navigation**
 
 I have opted for a tab-based navigation system, enabling seamless switching between different sections with ease. This design choice allows me to keep various parts of the Groove Box sounds active while effortlessly transitioning to the desired section.
 
@@ -60,7 +66,7 @@ Moreover, this design solution offers the convenience of utilizing keyboard keys
 
 ---
 
-### Drum Machine
+### **Drum Machine**
 
 I have meticulously crafted the drum machine section to be incredibly user-friendly, ensuring clarity and understanding with every interaction. When a button is clicked, touched, or a key is pressed, the corresponding action is immediately visible and intuitive. To provide visual feedback, a green light illuminates to indicate which sound is currently active. Additionally, each button is thoughtfully labeled, displaying both the name of the sound and the key that triggers it.
 
@@ -70,7 +76,7 @@ In addition to the aforementioned features, I have incorporated a display that i
 
 ---
 
-### Sequencer
+### **Sequencer**
 
 The sequencer is undoubtedly one of the standout features of the Groove Box, and i am thrilled with the sequencer, since users can easily add steps where sounds will play, creating intricate patterns and compositions. Each step where a sound is playing gets visually indicated by a green light, providing a clear overview of the active elements.
 
@@ -80,7 +86,7 @@ When the play button is pressed, the sequencer progresses through each step, pla
 
 ---
 
-### Loops
+### **Loops**
 
 The loops section enhances you with pre-recorded sounds, adding captivating layers to your compositions. Activate loops with ease, and utilize the repeat function for continuous playback. A reset option allows loops to start from the beginning, providing flexibility in your creative process.
 
@@ -92,7 +98,7 @@ With the loops section, you can effortlessly add depth and texture to your creat
 
 ---
 
-### Backing Tracks
+### **Backing Tracks**
 
 The backing tracks feature effortlessly adds finished songs as a background layer. A simple play/pause function for the named button, marked green when activated and unmarked when paused. With this feature, you can layer your own elements over the tracks. Explore new musical possibilities with ease and enjoy a seamless and immersive experience.
 
@@ -100,7 +106,7 @@ The backing tracks feature effortlessly adds finished songs as a background laye
 
 ---
 
-### Features Left to Implement
+### **Features Left to Implement**
 
 I had several features in mind that I truly wanted to implement to transform this into an exceptional groove box. However, I needed to ensure that the existing components were working flawlessly. Let me share with you an idea of what I envision for further implementation. I must say, this has been one of the most enjoyable programming experiences I've ever had! Initially, it started as a basic drum machine accompanied by a backing track, but as time went on, I found myself increasingly inspired. I couldn't resist pushing the boundaries and taking it to new heights. It dawned on me that JavaScript has the potential to create something truly incredible, beyond what I could have ever imagined.
 
@@ -133,7 +139,100 @@ I had several features in mind that I truly wanted to implement to transform thi
 
 ---
 
-## Technology Used
+## Tools and Technology Used
+
+- HTML
+  - The main structure of the site was developed using HTML.
+- CSS
+  - The website was styled using CSS with an external file.
+- JavaScript
+  - The logic was created using JavaScript in an external file.
+- Visual Studio Code
+  - The website was developed with Visual Studio Code as the IDE.
+- GitHub
+  - Source code is hosted on GitHub and deployed using Git Pages.
+- GitKraken
+  - https://www.gitkraken.com/ was used to commit and push code during development.
+- Tinypng
+  - https://tinypng.com/ was used to reduce the size of the image used on the website
+- Freeconvert
+  - https://www.freeconvert.com/ was used to convert the image file into webp format.
+- Favicon.io
+  - favicon files were created at https://favicon.io/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.com/
+
+---
+
+## Testing
+
+---
+
+### **Responsiveness**
+
+The pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge and Firefox browsers.
+
+Steps to test:
+
+Open browser and navigate to Groove Box
+Open the developer tools (right click and inspect)
+Set to responsive and decrease width to 320px
+Click and drag the responsive window to maximum width
+
+Expected:
+
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+
+Actual:
+
+Website behaved as expected.
+
+Website was also opened on the following devices and no responsive issues were seen:
+
+iPhone 14 (iOS - Safari) \
+iPhone 13 Pro Max (iOS - Safari - Brave Browser) \
+iPhone 11 (iOS - Safari) \
+iPhone 8 (iOS - Safari) \
+Samsung Galaxy A8 (Android - Samsung Browser) \
+Oneplus Nord 2 (Android - Chrome) \
+iPad 10" (iOS - Safari)
+
+---
+
+### **Accessibility**
+
+---
+
+Wave Accessibility tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
+
+Testing was focused to ensure the following criteria were met:
+
+- Color contrasts meet a minimum ratio as specified in WCAG 2.1 Contrast Guidelines
+- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
+- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
+- All not textual content had alternative text or titles so descriptions are read out to screen readers
+- HTML page lang attribute has been set
+- Aria properties have been implemented correctly
+- WCAG 2.1 Coding best practices being followed
+- Manual tests were also performed to ensure the website was accessible as possible and a few accessibility issues was identified.
+
+I have fixed them by adding aria-labels to most of the content, then adding tabindex and accesskey to make it even easier for screenreaders to use the Groove Box!
+
+---
+
+### **Lighthouse Testing**
+
+---
+
+I strived to achieve near-perfect scores across all metrics, aiming for a solid 100.
+
+---
+
+|               Mobile                |                Desktop                |
+| :---------------------------------: | :-----------------------------------: |
+| ![mobile](assets/readme/mobile.png) | ![desktop](assets/readme/desktop.png) |
+
+---
 
 ## Learning content used
 
