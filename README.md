@@ -48,10 +48,6 @@ The sequencer is undoubtedly one of the standout features of the Groove Box, and
 
 When the play button is pressed, the sequencer progresses through each step, playing the corresponding sound if it is marked green. This allows for dynamic and automated playback of the created sequences. While the current implementation serves its purpose effectively, i acknowledge that given more time, i could have implemented additional powerful functionalities to further enhance the sequencer. Nonetheless, even in its current state, the sequencer provides a functional and engaging experience.
 
-My ToDo-list for the Dream Sequencer is... \
-Set your own BPM, (beats per minute) \
-Make the full range of the Drum Machine available.
-
 ---
 
 ### Loops
@@ -68,6 +64,41 @@ With the loops section, you can effortlessly add depth and texture to your creat
 
 The backing tracks feature effortlessly adds finished songs as a background layer. A simple play/pause function for the named button, marked green when activated and unmarked when paused. With this feature, you can layer your own elements over the tracks. Explore new musical possibilities with ease and enjoy a seamless and immersive experience.
 
+---
+
+### Features Left to Implement
+
+I had several features in mind that I truly wanted to implement to transform this into an exceptional groove box. However, I needed to ensure that the existing components were working flawlessly. Let me share with you an idea of what I envision for further implementation. I must say, this has been one of the most enjoyable programming experiences I've ever had! Initially, it started as a basic drum machine accompanied by a backing track, but as time went on, I found myself increasingly inspired. I couldn't resist pushing the boundaries and taking it to new heights. It dawned on me that JavaScript has the potential to create something truly incredible, beyond what I could have ever imagined.
+
+#### Drum Machine
+
+- Add the choice of chosing from a list of sounds, making it more modular.
+
+#### Sequencer
+
+- Set your own BPM, (beats per minute)
+- Make the full range of the Drum Machine available.
+- Make more pages where the sequence can continue how ever long it wants!
+
+#### Loops
+
+- Add categories for loops.
+
+#### Backing Tracks
+
+- Add categories for more choice
+
+#### Piano (Non existing feature)
+
+- A playable Piano.
+- Separate left and right side of the keyboard, left piano, right drum machine.
+
+#### Metronome (None existing feature)
+
+- Add a metronome to keep track of the beat.
+
+---
+
 ## Learning content used
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd \
@@ -76,6 +107,9 @@ https://www.toptal.com/developers/keycode \
 Keyboard Events from Code Institute Course! \
 Adding Event Listeners from Code Institute Course! \
 https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript
+
+Ive probably spent to much time reading solutions on StackOverflow. \
+https://www.stackoverflow.com/
 
 ## Media
 
