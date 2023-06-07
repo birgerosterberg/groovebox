@@ -111,9 +111,9 @@ function pauseAllAudio() {
   for (let i = 0; i < audioElements.length; i++) {
     audioElements[i].pause(); // Pause the audio element
   }
-  isPlaying = !isPlaying;
 
-  if (!isPlaying) {
+  if (isPlaying) {
+    isPlaying = !isPlaying;
     playButton.textContent = "Play"; // Changes the text to Pause if its playing
   }
 }
