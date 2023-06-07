@@ -10,7 +10,7 @@ light-grey {color: #EAEAEA} Text color!
 body {
   margin: auto;
   background-color: #231f20;
-  color: #eaeaea;
+  color: #050505;
   font-family: "Raleway", sans-serif;
 }
 
@@ -19,6 +19,7 @@ h1 {
   background-position: center center;
   background-size: contain;
   overflow: cover;
+  color: #eaeaea;
   font-family: "Playfair Display", serif;
   font-size: 40px;
   margin: 0;
@@ -29,7 +30,7 @@ button {
   background-color: #ad974f;
   border: 2px solid black;
   border-radius: 10px;
-  color: #eaeaea;
+  color: #050505;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -61,7 +62,7 @@ button:active {
 .tab {
   cursor: pointer;
   display: inline-block;
-  background-color: #8e793e;
+  background-color: #ad974f;
   padding: 0px 5px 0px 5px;
   margin: 2px;
   text-align: center;
@@ -75,7 +76,7 @@ button:active {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .tab:hover {
-  background-color: #ad974f;
+  background-color: #8e793e;
 }
 .tab-content .content {
   display: none;
@@ -117,6 +118,7 @@ button:active {
   margin: 0;
   padding: 5px;
   width: 80px;
+  color: #eaeaea;
 }
 .master-vol-btn {
   width: 30px;
@@ -142,6 +144,9 @@ button:active {
 kbd {
   margin: 0;
   font-weight: bolder;
+}
+.key-info {
+  color: #eaeaea;
 }
 
 /* Sequencer Styles! */

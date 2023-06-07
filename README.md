@@ -26,6 +26,12 @@ https://getcssscan.com/css-box-shadow-examples
 
 ---
 
+### Menu
+
+I've added a menu at the top of the groove box with a "How To" section for instructions and a pause button to stop all active audio. It also includes a volume control with a text display showing the percentage and + / - buttons for 10% adjustments. This menu enhances usability and offers quick access to important features for an improved user experience.
+
+---
+
 ### Navigation
 
 I have opted for a tab-based navigation system, enabling seamless switching between different sections with ease. This design choice allows me to keep various parts of the Groove Box sounds active while effortlessly transitioning to the desired section.
@@ -108,7 +114,7 @@ Keyboard Events from Code Institute Course! \
 Adding Event Listeners from Code Institute Course! \
 https://www.tutorialspoint.com/how-to-create-tabs-with-css-and-javascript
 
-Ive probably spent to much time reading solutions on StackOverflow. \
+Ive probably spent a few to many hours reading and searching for solutions on StackOverflow. \
 https://www.stackoverflow.com/
 
 ## Media
