@@ -215,8 +215,7 @@ Testing was focused to ensure the following criteria were met:
 - Aria properties have been implemented correctly
 - WCAG 2.1 Coding best practices being followed
 - Manual tests were also performed to ensure the website was accessible as possible and a few accessibility issues was identified.
-
-I have fixed them by adding aria-labels to all of the interactive content, then adding tabindex and accesskey to the nav menu to make it even easier for screenreaders to use the Groove Box!
+  - I have fixed them by adding aria-labels to all of the interactive content, then adding tabindex and accesskey to the nav menu to make it even easier for screenreaders to use the Groove Box!
 
 ---
 
@@ -272,3 +271,5 @@ Using data-key function for the pad sample player so i can reuse the function an
 When pressing Reset button due to both the Loop and Backing Tracks play music with the same function they disturb eachother... Have to make my own functions for each of them to work properly.
 
 Fixed by adding objects with their own status depending on the musicId!
+
+Volume set to 0 when page load not working on mobile, scraping idea and letting it be as it is as default, to have a working groove box!

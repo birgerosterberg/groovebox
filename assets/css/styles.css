@@ -19,7 +19,6 @@ h1 {
   background-image: url(../images/bg-img.webp);
   background-position: center center;
   background-size: contain;
-  overflow: cover;
   color: #eaeaea;
   font-family: "Playfair Display", serif;
   font-size: 40px;
@@ -175,9 +174,7 @@ kbd {
 }
 
 /* Sequencer Styles! */
-#key-press {
-  font-style: capitalize;
-}
+
 #play-btn {
   padding: 10px;
 }
