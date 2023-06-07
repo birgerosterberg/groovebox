@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Birger Österberg">
+    <meta name="description" content="Groove Box, a musical box of joy!">
+    <meta name="keywords"
+        content="groove box, groove,drum machine, sequencer, loops, backing tracks, music creation, portable music, javascript groove box, music creation, daw">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Groove Box</title>
 </head>
@@ -17,10 +21,12 @@
                 <div class="container-row top-menu">
                     <div class="container-col">
                         <div>
-                            <button class="menu-btn" id="openModalBtn">How To</button>
+                            <!-- How To Modal! -->
+                            <button class="menu-btn" id="openModalBtn"
+                                aria-label="Button to the How to use Document(Opens as modal)">How To</button>
                             <div id="modal" class="modal">
                                 <div class="modal-content">
-                                    <span class="close">&times;</span>
+                                    <span class="close" aria-label="Button to close the Modal">&times;</span>
                                     <h2>How To</h2>
                                     <h3>Menu</h3>
                                     <ul>
@@ -51,19 +57,32 @@
                                     <ul>
                                         <li>Press a box to play, it turns green to show its active.</li>
                                     </ul>
+                                    <div class="feet-first">
+                                        <p>Creator <span>Birger Österberg</span></p>
+                                        <a href="https://www.linkedin.com/in/birger-%C3%B6sterberg-504680251"
+                                            aria-label="Link to Birger Österberg Linkedin(Opens in new tab)"
+                                            target="_blank" rel="noopener">Linkedin</a>
+                                        <a href="https://github.com/birgerosterberg"
+                                            aria-label="Link to Birger Österberg GitHub(Opens in new tab)"
+                                            target="_blank" rel="noopener">GitHub</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <button class="menu-btn" onclick="pauseAllAudio()">Pause All</button>
+                            <!-- Pause All button! -->
+                            <button aria-label="button to pause all sounds playing" class="menu-btn"
+                                onclick="pauseAllAudio()">Pause All</button>
                         </div>
                     </div>
-
+                    <!-- Volume buttons  -->
                     <div class="container-col">
                         <p id="volume-status">Volume: 0%</p>
                         <div class="container-row">
-                            <button onclick="increaseVolume()" class="master-vol-btn">+</button>
-                            <button onclick="decreaseVolume()" class="master-vol-btn">-</button>
+                            <button aria-label="button to increase volume" onclick="increaseVolume()"
+                                class="master-vol-btn">+</button>
+                            <button aria-label="button to decrease volume" onclick="decreaseVolume()"
+                                class="master-vol-btn">-</button>
                         </div>
                     </div>
                 </div>
@@ -73,158 +92,167 @@
     </header>
     <!-- Main section of it all -->
     <main>
-        <!-- Menu navigation aka Tabs -->
-        <div class="tabs">
-            <div class="tab-container">
-                <div class="tab" onclick="changeTab(0)">
-                    <p>Drum Machine</p>
+        <div class="container">
+            <!-- Menu navigation aka Tabs -->
+            <div class="tabs">
+                <div class="tab-container">
+                    <div aria-label="Change to the Drum Machine" class="tab" onclick="changeTab(0)">
+                        <p>Drum Machine</p>
+                    </div>
+                    <div aria-label="Change to the Sequencer" class="tab" onclick="changeTab(1)">
+                        <p>Sequencer</p>
+                    </div>
+                    <div aria-label="Change to the Loops" class="tab" onclick="changeTab(2)">
+                        <p>Loops</p>
+                    </div>
+                    <div aria-label="Change to the Backing Tracks" class="tab" onclick="changeTab(3)">
+                        <p>Backing tracks</p>
+                    </div>
                 </div>
-                <div class="tab" onclick="changeTab(1)">
-                    <p>Sequencer</p>
-                </div>
-                <div class="tab" onclick="changeTab(2)">
-                    <p>Loops</p>
-                </div>
-                <div class="tab" onclick="changeTab(3)">
-                    <p>Backing tracks</p>
-                </div>
-            </div>
-            <div class="tab-content">
-                <div class="content">
-                    <div class="container-col">
-                        <!-- 
+                <div class="tab-content">
+                    <div class="content">
+                        <div class="container-col">
+                            <!-- 
                             Input drumpads! need to insert the right data-key
                              from the audio in the function clickPlay('insert number here') 
                         -->
-                        <div class="pad-container">
-                            <button class="pad" data-key="65" onclick="clickPlay(event, 65)">Kick <p><kbd>A</kbd></p>
-                            </button>
-                            <button class="pad" data-key="83" onclick="clickPlay(event, 83)">Open HiHat <p><kbd>S</kbd>
-                                </p>
-                            </button>
-                            <button class="pad" data-key="68" onclick="clickPlay(event, 68)">Clap <p><kbd>D</kbd></p>
-                            </button>
-                            <button class="pad" data-key="70" onclick="clickPlay(event, 70)">Mid Perc <p><kbd>F</kbd>
-                                </p>
-                            </button>
+                            <div class="pad-container">
+                                <button class="pad" data-key="65" onclick="clickPlay(event, 65)">Kick <p><kbd>A</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="83" onclick="clickPlay(event, 83)">Open HiHat <p>
+                                        <kbd>S</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="68" onclick="clickPlay(event, 68)">Clap <p><kbd>D</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="70" onclick="clickPlay(event, 70)">Mid Perc <p>
+                                        <kbd>F</kbd>
+                                    </p>
+                                </button>
+                            </div>
+                            <div class="pad-container">
+                                <button class="pad" data-key="72" onclick="clickPlay(event, 72)">Low Perc <p>
+                                        <kbd>H</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="74" onclick="clickPlay(event, 74)">Shaker <p><kbd>J</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="75" onclick="clickPlay(event, 75)">Closed HiHat <p>
+                                        <kbd>K</kbd>
+                                    </p>
+                                </button>
+                                <button class="pad" data-key="76" onclick="clickPlay(event, 76)">Snare <p><kbd>L</kbd>
+                                    </p>
+                                </button>
+                            </div>
                         </div>
-                        <div class="pad-container">
-                            <button class="pad" data-key="72" onclick="clickPlay(event, 72)">Low Perc <p><kbd>H</kbd>
-                                </p>
-                            </button>
-                            <button class="pad" data-key="74" onclick="clickPlay(event, 74)">Shaker <p><kbd>J</kbd></p>
-                            </button>
-                            <button class="pad" data-key="75" onclick="clickPlay(event, 75)">Closed HiHat <p>
-                                    <kbd>K</kbd>
-                                </p>
-                            </button>
-                            <button class="pad" data-key="76" onclick="clickPlay(event, 76)">Snare <p><kbd>L</kbd></p>
-                            </button>
+                        <!-- Information about the key pressed and the sound played! -->
+                        <div class="container-col key-info">
+                            <p>Key pressed: <span id="key-press"></span> </p>
+                            <p>Sound played: <span id="sound-played"></span> </p>
                         </div>
                     </div>
-                    <!-- Information about the key pressed and the sound played! -->
-                    <div class="container-col key-info">
-                        <p>Key pressed: <span id="key-press"></span> </p>
-                        <p>Sound played: <span id="sound-played"></span> </p>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container-col">
-                        <button id="play-btn">Play</button>
+                    <div class="content">
+                        <div class="container-col">
+                            <button aria-label="Play the sequencer" id="play-btn">Play</button>
 
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                        <div class="seq-blocks">
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                            <div class="sequencer"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container-col">
-                        <div class="container-row">
-                            <button class="pad" onclick="playMusic(event, 'cinemachord')">Cinematic
-                                Chord</button>
-                            <div class="container-col">
-                                <button class="btn-rr" onclick="toggleRepeat(event, 'cinemachord')">Repeat</button>
-                                <button class="btn-rr" onclick="resetLoop('cinemachord')">Reset</button>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
                             </div>
-                        </div>
-                        <div class="container-row">
-                            <button class="pad" onclick="playMusic(event, 'dreamygc')">Dreamy Guitar
-                                Chords</button>
-                            <div class="container-col">
-                                <button class="btn-rr" onclick="toggleRepeat(event, 'dreamygc')">Repeat</button>
-                                <button class="btn-rr" onclick="resetLoop('dreamygc')">Reset</button>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
                             </div>
-                        </div>
-                        <div class="container-row">
-                            <button class="pad" onclick="playMusic(event, 'warmbreeze')">Warm Breeze
-                                Lo-Fi</button>
-                            <div class="container-col">
-                                <button class="btn-rr" onclick="toggleRepeat(event, 'warmbreeze')">Repeat</button>
-                                <button class="btn-rr" onclick="resetLoop('warmbreeze')">Reset</button>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
                             </div>
-                        </div>
-                        <div class="container-row">
-                            <button class="pad" onclick="playMusic(event, 'widearppiano')">Wide Arp
-                                Piano
-                                &
-                                Guitar</button>
-                            <div class="container-col">
-                                <button class="btn-rr" onclick="toggleRepeat(event, 'widearppiano')">Repeat</button>
-                                <button class="btn-rr" onclick="resetLoop('widearppiano')">Reset</button>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
                             </div>
-                        </div>
-                        <div class="container-row">
-                            <button class="pad" onclick="playMusic(event, 'spaceychord')">Spacey
-                                Chords</button>
-                            <div class="container-col">
-                                <button class="btn-rr" onclick="toggleRepeat(event, 'spaceychord')">Repeat</button>
-                                <button class="btn-rr" onclick="resetLoop('spaceychord')">Reset</button>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                            </div>
+                            <div class="seq-blocks">
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
+                                <div class="sequencer"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="content">
-                    <div class="container-col">
-                        <!-- 
+                    <div class="content">
+                        <div class="container-col">
+                            <div class="container-row">
+                                <button class="pad" onclick="playMusic(event, 'cinemachord')">Cinematic
+                                    Chord</button>
+                                <div class="container-col">
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'cinemachord')">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('cinemachord')">Reset</button>
+                                </div>
+                            </div>
+                            <div class="container-row">
+                                <button class="pad" onclick="playMusic(event, 'dreamygc')">Dreamy Guitar
+                                    Chords</button>
+                                <div class="container-col">
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'dreamygc')">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('dreamygc')">Reset</button>
+                                </div>
+                            </div>
+                            <div class="container-row">
+                                <button class="pad" onclick="playMusic(event, 'warmbreeze')">Warm Breeze
+                                    Lo-Fi</button>
+                                <div class="container-col">
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'warmbreeze')">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('warmbreeze')">Reset</button>
+                                </div>
+                            </div>
+                            <div class="container-row">
+                                <button class="pad" onclick="playMusic(event, 'widearppiano')">Wide Arp
+                                    Piano
+                                    &
+                                    Guitar</button>
+                                <div class="container-col">
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'widearppiano')">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('widearppiano')">Reset</button>
+                                </div>
+                            </div>
+                            <div class="container-row">
+                                <button class="pad" onclick="playMusic(event, 'spaceychord')">Spacey
+                                    Chords</button>
+                                <div class="container-col">
+                                    <button class="btn-rr" onclick="toggleRepeat(event, 'spaceychord')">Repeat</button>
+                                    <button class="btn-rr" onclick="resetLoop('spaceychord')">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="container-col">
+                            <!-- 
                             Where u chose what type of music u want to drum to section 
                             Reusable code through the use of the function playMusic('id') of the audio file you wish to play!
                             -->
-                        <button class="bcktrk">Jazz</button>
-                        <div>
-                            <button class="bcktrk" onclick="playMusic(event, 'reggae')">Reggae</button>
+                            <button class="bcktrk">Jazz</button>
+                            <div>
+                                <button class="bcktrk" onclick="playMusic(event, 'reggae')">Reggae</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 /* Google fonts import! */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap");
+
 /* Color codes to use!
 dark-gold {color: #8E793E} // Border color!
 light-gold {color: #AD974F}
@@ -15,7 +16,7 @@ body {
 }
 
 h1 {
-  background-image: url(../images/bg-img.png);
+  background-image: url(../images/bg-img.webp);
   background-position: center center;
   background-size: contain;
   overflow: cover;
@@ -45,6 +46,28 @@ button:active {
     rgba(142, 121, 62, 1) 70%
   );
 }
+a {
+  color: #eaeaea;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a:active {
+  color: #ad974f;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #050505;
+  padding: 0px 10px 0px 10px;
+  text-shadow: rgb(147, 121, 76) 0px 0px 20px;
+}
+
+a:visited {
+  color: #eaeaea;
+}
+
 .bactive {
   background: radial-gradient(
     circle,
@@ -214,6 +237,9 @@ kbd {
   border: 1px solid #ad974f;
   width: 80%;
 }
+.modal-content span {
+  font-weight: bold;
+}
 
 .close {
   color: #aaa;
@@ -238,4 +264,83 @@ kbd {
 }
 .modal-content li {
   padding: 2px;
+}
+
+/* Information about me! */
+
+.feet-first {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #eaeaea;
+  text-align: center;
+}
+.feet-first p {
+  /* margin: 0px 20px 0px 20px; */
+  padding: 2px;
+}
+.feet-first a {
+  margin: 5px;
+}
+
+/* Media Queries! */
+@media only screen and (min-width: 425px) {
+  .top-menu {
+    justify-content: center;
+  }
+  .menu-btn {
+    margin-right: 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-content {
+    width: 50%;
+    margin: 5% auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .modal-content {
+    width: 35%;
+    margin: 4% auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 26px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  button {
+    font-size: 20px;
+  }
+  .menu-btn {
+    width: 110px;
+    height: 50px;
+  }
+  .pad {
+    height: 120px;
+    width: 120px;
+  }
+  #volume-status {
+    font-size: 18px;
+    width: 120px;
+  }
+  .master-vol-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .btn-rr {
+    width: 120px;
+    height: 60px;
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .modal-content {
+    width: 25%;
+  }
 }
