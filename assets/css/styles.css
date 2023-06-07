@@ -141,7 +141,7 @@ a:visited {
   font-size: 14px;
   margin: 0;
   padding: 5px;
-  width: 80px;
+  width: 90px;
   color: #eaeaea;
 }
 .master-vol-btn {
@@ -298,20 +298,7 @@ kbd {
     margin-right: 35px;
   }
 }
-
 @media only screen and (min-width: 768px) {
-  .modal-content {
-    width: 50%;
-    margin: 5% auto;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .modal-content {
-    width: 35%;
-    margin: 4% auto;
-  }
-}
-@media only screen and (min-width: 1440px) {
   body {
     font-size: 26px;
   }
@@ -344,7 +331,19 @@ kbd {
     height: 60px;
     margin-left: 10px;
   }
+  .modal-content {
+    width: 50%;
+    margin: 5% auto;
+  }
 }
+
+@media only screen and (min-width: 1280px) {
+  .modal-content {
+    width: 35%;
+    margin: 4% auto;
+  }
+}
+
 @media only screen and (min-width: 1800px) {
   .modal-content {
     width: 25%;

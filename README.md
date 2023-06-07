@@ -216,7 +216,7 @@ Testing was focused to ensure the following criteria were met:
 - WCAG 2.1 Coding best practices being followed
 - Manual tests were also performed to ensure the website was accessible as possible and a few accessibility issues was identified.
 
-I have fixed them by adding aria-labels to most of the content, then adding tabindex and accesskey to make it even easier for screenreaders to use the Groove Box!
+I have fixed them by adding aria-labels to all of the interactive content, then adding tabindex and accesskey to the nav menu to make it even easier for screenreaders to use the Groove Box!
 
 ---
 
