@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioElements = document.getElementsByTagName("audio");
   for (let i = 0; i < audioElements.length; i++) {
     audioElements[i].volume = 0;
+    audioElements[i].pause(); // Pause the audio immediately after setting the volume
   }
 });
 
