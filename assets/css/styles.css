@@ -282,6 +282,10 @@ kbd {
 .feet-first a {
   margin: 5px;
 }
+/* 404.html */
+.html-404 {
+  color: #eaeaea;
+}
 
 /* Media Queries! */
 @media only screen and (min-width: 425px) {
