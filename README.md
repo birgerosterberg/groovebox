@@ -54,6 +54,20 @@ Make the full range of the Drum Machine available.
 
 ---
 
+### Loops
+
+The loops section enhances you with pre-recorded sounds, adding captivating layers to your compositions. Activate loops with ease, and utilize the repeat function for continuous playback. A reset option allows loops to start from the beginning, providing flexibility in your creative process.
+
+Activated loops are visually represented by green buttons, offering a clear indication of their status. When loops are deactivated, the green illumination is removed, simplifying loop management.
+
+With the loops section, you can effortlessly add depth and texture to your creation. Explore the possibilities and elevate your musical creations!
+
+---
+
+### Backing Tracks
+
+The backing tracks feature effortlessly adds finished songs as a background layer. A simple play/pause function for the named button, marked green when activated and unmarked when paused. With this feature, you can layer your own elements over the tracks. Explore new musical possibilities with ease and enjoy a seamless and immersive experience.
+
 ## Learning content used
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd \
