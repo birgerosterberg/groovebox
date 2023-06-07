@@ -233,7 +233,63 @@ I strived to achieve near-perfect scores across all metrics, aiming for a solid 
 
 ---
 
+### **Validation**
+
+W3C Testing reported errors related to the usage of aria-labels on the div elements. These errors were triggered because i used the tab navigation design to navigate through the elements and had to provide explanations for their functionalities. To enhance accessibility, I also included the accesskey attribute.
+
+In order to address the warnings, I had the option to remove the explanations. However, I believe that I should consider the warnings as an opportunity to improve accessibility.
+
+![w3c](assets/readme/w3c.png)
+
+Jigsaw passed without any warnings!
+
+![jigsaw](assets/readme/jigsaw.png)
+
+In the Jshint report, it states that there are seven unused variables in my code. This is because I reference them inside the HTML through onclick handlers. Afterwards, i considered using click listeners instead, which would have resolved the issue. However, I decided to stick with the current approach for the sake of consistency since i had already implemented it this way. Additionally, rewriting the code would have required considerable effort and i didn't have the energy nor time to undertake that task at the time.
+
+![jshint](assets/readme/jshint.png)
+
+---
+
+## Deployment
+
+---
+
+### **Version Control**
+
+The site was created using Visual Studio code and pushed to github to the remote repository [groovebox](https://github.com/birgerosterberg/groovebox).
+
+I have developed this project using two different Windows computers: one laptop and one stationary desktop. I have kept the code up to date throughout my work by a tool called [GitKraken](https://gitkraken.com), which provides an outstanding overview of my workflow. Its graphical user interface allows me to track my commits throughout the entire project and clearly indicates which system I used for each commit. This fortunate knowledge helps me locate the original files easily if I need to rework something.
+
+During this process i have also had the choice to use the terminal in GitKraken to use commands such as git pull, git add, git commit and git push. However i rarely been using this.
+
+### **Deployment to Github Pages**
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab
+- From the menu on left select 'Pages'
+- From the source section drop-down menu, select the Branch: main
+- Click 'Save'
+- A live link will be displayed in a green banner when published successfully.
+- The live link can be found [here](https://birgerosterberg.github.io/groovebox/)
+
+### **Clone the Repository to Code Locally**
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+- The project will now of been cloned on your local machine for use.
+
+---
+
 ## Learning content used
+
+---
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd \
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio \
