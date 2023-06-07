@@ -4,6 +4,9 @@ Are you tired of those mundane, monotonous commutes that drain your energy and l
 
 Featuring a powerful drum machine, a sequencer, a versatile loop player, and a captivating backing track player, my groove box is a true all-in-one powerhouse. Let your creativity flow as you layer captivating beats, craft mesmerizing melodies, and unleash your inner musical genius!
 
+![mockup](assets/readme/mockup.png)
+[Visit the Live Page Here!](https://birgerosterberg.github.io/groovebox/)
+
 ## Design
 
 My design philosophy for this Groove Box was centered around minimalism and elegance, focusing primarily on the core functions. I believe that excessive visual embellishments can detract from the essence of the tool. Following in the footsteps of many Digital Audio Workstations (DAWs), I aimed to create a streamlined interface that places music-making at the forefront, allowing users to immerse themselves in the creative process without unnecessary distractions.
@@ -22,13 +25,28 @@ https://cssgradient.io/ \
 Box Shadows from: \
 https://getcssscan.com/css-box-shadow-examples
 
+### Wireframe
+
 ## Features
+
+---
+
+### Header / Logo
+
+I have implemented a basic h1 header as the logo, featuring a sleek and elegant design. The header incorporates a background image of a soundwave, adding a touch of visual appeal to the overall aesthetic.
+
+![logo](assets/readme/logo.png)
 
 ---
 
 ### Menu
 
 I've added a menu at the top of the groove box with a "How To" section for instructions and a pause button to stop all active audio. It also includes a volume control with a text display showing the percentage and + / - buttons for 10% adjustments. This menu enhances usability and offers quick access to important features for an improved user experience.
+
+The How To is also where i decided to put what usually is footer content with info about me and contact details, to keep the Groove Box just as that, a Groove Box, giving it a more "App" feeling and something elegant.
+
+![menu](assets/readme/menu.png)
+![howto](assets/readme/howto.png)
 
 ---
 
@@ -38,6 +56,8 @@ I have opted for a tab-based navigation system, enabling seamless switching betw
 
 Moreover, this design solution offers the convenience of utilizing keyboard keys on desktop devices to play the Drum Machine within each of the Groove Box functions, allowing for multitasking and simultaneous arrangement of other elements.
 
+![navigation](assets/readme/nav.png)
+
 ---
 
 ### Drum Machine
@@ -46,6 +66,8 @@ I have meticulously crafted the drum machine section to be incredibly user-frien
 
 In addition to the aforementioned features, I have incorporated a display that indicates which key is being pressed and the corresponding sound being played. This real-time feedback allows users to have a visual reference of their input and the resulting audio output. Furthermore, if a key is pressed that does not trigger any sound, a message is displayed to notify the user that no sound is assigned to that specific key.
 
+![drummachine](assets/readme/drum.png)
+
 ---
 
 ### Sequencer
@@ -53,6 +75,8 @@ In addition to the aforementioned features, I have incorporated a display that i
 The sequencer is undoubtedly one of the standout features of the Groove Box, and i am thrilled with the sequencer, since users can easily add steps where sounds will play, creating intricate patterns and compositions. Each step where a sound is playing gets visually indicated by a green light, providing a clear overview of the active elements.
 
 When the play button is pressed, the sequencer progresses through each step, playing the corresponding sound if it is marked green. This allows for dynamic and automated playback of the created sequences. While the current implementation serves its purpose effectively, i acknowledge that given more time, i could have implemented additional powerful functionalities to further enhance the sequencer. Nonetheless, even in its current state, the sequencer provides a functional and engaging experience.
+
+![sequencer](assets/readme/seq.png)
 
 ---
 
@@ -64,11 +88,15 @@ Activated loops are visually represented by green buttons, offering a clear indi
 
 With the loops section, you can effortlessly add depth and texture to your creation. Explore the possibilities and elevate your musical creations!
 
+![loops](assets/readme/loops.png)
+
 ---
 
 ### Backing Tracks
 
 The backing tracks feature effortlessly adds finished songs as a background layer. A simple play/pause function for the named button, marked green when activated and unmarked when paused. With this feature, you can layer your own elements over the tracks. Explore new musical possibilities with ease and enjoy a seamless and immersive experience.
+
+![backingtrack](assets/readme/bcktrk.png)
 
 ---
 
@@ -104,6 +132,8 @@ I had several features in mind that I truly wanted to implement to transform thi
 - Add a metronome to keep track of the beat.
 
 ---
+
+## Technology Used
 
 ## Learning content used
 
