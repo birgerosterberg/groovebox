@@ -72,13 +72,6 @@ function toggleRepeat(event, musicId) {
 /**
  * VoluMe functionality for the player!
  */
-// Set the initial volume for all audio elements to 0 when the page loads
-// document.addEventListener("DOMContentLoaded", function () {
-//   const audioElements = document.getElementsByTagName("audio");
-//   for (let i = 0; i < audioElements.length; i++) {
-//     audioElements[i].volume = 0;
-//   }
-// });
 
 // Function to increase the volume for all audio tracks with the use of buttons!
 function increaseVolume() {
@@ -113,6 +106,17 @@ function updateVolumeStatus(volume) {
   const volumeStatusElement = document.getElementById("volume-status");
   volumeStatusElement.textContent = `Volume: ${volume}%`; // Update the text content of the volume status paragraph with the new volume value
 }
+
+// Get the increase and decrease buttons
+const increaseVol = document.getElementById("increase-vol");
+const decreaseVol = document.getElementById("decrease-vol");
+
+// Add event listeners for both click and touch events
+increaseVol.addEventListener("click", increaseVolume);
+increaseVol.addEventListener("touchstart", increaseVolume);
+
+decreaseVol.addEventListener("click", decreaseVolume);
+decreaseVol.addEventListener("touchstart", decreaseVolume);
 
 /** Pause function */
 // Function to pause all audio elements
