@@ -47,7 +47,7 @@ I have implemented a basic h1 header as the logo, featuring a sleek and elegant 
 
 ### **Menu**
 
-I've added a menu at the top of the groove box with a "How To" section for instructions and a pause button to stop all active audio. It also includes a volume control with a text display showing the percentage and + / - buttons for 10% adjustments. This menu enhances usability and offers quick access to important features for an improved user experience.
+I've added a menu at the top of the groove box with a "How To" section for instructions and a pause button to stop all active audio. It also includes a volume control with a text display showing the percentage and + / - buttons for 10% adjustments. The volume control specifically works on desktop setups as volume adjustments on mobile and tablet devices are easily accessible. This menu enhances usability and offers quick access to important features for an improved user experience.
 
 The How To is also where i decided to put what usually is footer content with info about me and contact details, to keep the Groove Box just as that, a Groove Box, giving it a more "App" feeling and something elegant.
 
@@ -235,7 +235,7 @@ I strived to achieve near-perfect scores across all metrics, aiming for a solid 
 
 ### **Validation**
 
-W3C Testing reported errors related to the usage of aria-labels on the div elements. These errors were triggered because i used the tab navigation design to navigate through the elements and had to provide explanations for their functionalities. To enhance accessibility, I also included the accesskey attribute.
+W3C Testing reported errors related to the usage of aria-labels on the div elements. These errors were triggered because i used the tab navigation design to navigate through the elements and had to provide explanations for their functionalities. Also i had to add aria-labels to the sequencer div boxes to further enhance accessibility, I also included the accesskey attribute.
 
 In order to address the warnings, I had the option to remove the explanations. However, I believe that I should consider the warnings as an opportunity to improve accessibility.
 
@@ -245,9 +245,83 @@ Jigsaw passed without any warnings!
 
 ![jigsaw](assets/readme/jigsaw.png)
 
-In the Jshint report, it states that there are seven unused variables in my code. This is because I reference them inside the HTML through onclick handlers. Afterwards, i considered using click listeners instead, which would have resolved the issue. However, I decided to stick with the current approach for the sake of consistency since i had already implemented it this way. Additionally, rewriting the code would have required considerable effort and i didn't have the energy nor time to undertake that task at the time.
+In the Jshint report, it states that there are five unused variables in my code. This is because I reference them inside the HTML through onclick handlers. Afterwards, i considered using click listeners instead, which would have resolved the issue. However, I decided to stick with the current approach for the sake of consistency since i had already implemented it this way. Additionally, rewriting the code would have required considerable effort and i didn't have the energy nor time to undertake that task at the time.
 
 ![jshint](assets/readme/jshint.png)
+
+### **Testing the Groove Box**
+
+- How To: Opens modal, works as intended.
+
+  - X Closes the modal, also Escape key closes the modal, works as intended.
+
+---
+
+- Pause All: Pause all audio playing, works as intended.
+
+---
+
+- Volume (**Desktop Only**)
+  - Clicking on + increases the volume and updates the Volume % text, works as intended.
+  - Clicking on + decreases the volume and updates the Volume % text, works as intended.
+
+---
+
+- Navigation
+
+  - I can switch seamlessly through the different parts of the Groove Box without stopping audio playback, works as intended.
+
+---
+
+- Drum Machine
+
+  - Clicking / Touch on the button plays a sound, gives feedback, works as intended.
+  - Keyboard interaction plays sound and show what key is pressed, works as intended.
+
+---
+
+- Sequencer
+
+  - Clicking / Touch on the boxes adds a green light, works as intended.
+  - Clicking / Touch Play changes the button into Pause, while it starts the sequencer, works as intended.
+  - The sequencer plays a sound on the step that got a green light, works as intended.
+  - The sequencer shows what step it is at, works as intended.
+
+---
+
+- Loops
+
+  - Clicking / Touch a Loop name starts playback of the sound and marks it green, works as intended.
+  - Clicking / Touch a Loop that is already playing pause the sound and removes the green mark, works as intended.
+  - Clicking / Touch Repeat marks the button as green, then loop the sound, works as intended.
+  - Clicking / Touch Repeat that already is marked green, removes the green mark and stops looping the sound, works as intended.
+  - Clicking / Touch Reset restarts the playback of the Loop.
+
+---
+
+- Backing Tracks
+  - Clicking / Touch plays the track and marks it green, works as intended.
+  - Clicking / Touch a track that plays removes the green marking and pause the track, works as intended.
+
+---
+
+### **Trial and Error**
+
+During this project i have had the most problems with getting things working the same on mobile and desktop platforms, the biggest Throughout this project, I encountered several challenges in achieving consistent functionality across both mobile and desktop platforms. My main hurdle was relying on the "responsive" mobile mode in the browser's development tools, mistakenly assuming it accurately simulated the behavior of actual mobile devices. This oversight resulted in numerous bugs that became apparent only when testing the deployed version on real devices. Fortunately, with the help of friends and family, I was able to identify any overlooked issues and make the necessary adjustments to improve the Groove Box's performance.
+
+### **Issues**
+
+- Volume control: I encountered difficulties with implementing the volume control feature for mobile devices. Despite attempting various solutions, i ultimately decided to remove the feature for mobile devices altogether. This decision was based on the realization that mobile devices already have readily accessible volume controls, making an additional control redundant. I still mourn the removal of the volume slider though!
+
+- Pause All: I encountered a challenge with the "Pause All" functionality, as it initially failed to stop the sequencer. After resolving this issue, a new problem arose where the sequencer became buggy. However, I managed to find fixes for these problems by implementing an if statement. This allowed me to address the issues and ensure that the "Pause All" function properly halts all active audio elements, including the sequencer.
+
+- Drum Machine: I encountered the need to incorporate a visual effect when a key is pressed on the keyboard. However, i faced a similar challenge as mentioned before, where the touch functionality on phones did not provide the expected visual feedback of a clicked button. To overcome this, i implemented a solution where a class is added each time the function is executed, regardless of whether it is triggered by a button click / touch or a key press. By dynamically applying this class, I was able to achieve consistent visual feedback for both interactions. Additionally, i included an if-else statement to handle scenarios where no sound is associated with the pressed key. This adjustment prevented any errors from occurring in the console.
+
+- Sequencer: The implementation of the Sequencer feature proved to be a significant challenge. I dedicated a considerable amount of time to solving this complex task. Once I finally found a solution, I realized the need for visual feedback indicating the current step being played. Initially, I implemented a solution that only displayed feedback on the steps I had explicitly marked. However, upon further reflection, I realized that the solution could be simplified. By moving the feedback outside of the if statement within the foreach loop, I was able to achieve the desired result.
+
+- Loops: When pressing the Reset button, as well as the Repeat button, I encountered the same issue where the shared function for both the Loop and Backing Tracks caused interference. To overcome this challenge, I implemented separate objects with their own statuses, which were dependent on the musicId. By assigning unique statuses to each track, I successfully resolved the conflicts and ensured that the Reset and Repeat buttons functioned independently for the Loops.
+
+- Backing Tracks: Was initially designed to be basic and straightforward. However, as mentioned earlier, it encountered an issue where it interfered with the reset and repeat functionality of the Loops.
 
 ---
 
@@ -317,15 +391,3 @@ https://www.wikiloops.com/tracks/Jazz-without-Drums.php
 ## Buggs
 
 Fixes:
-
-Instead of having play / pause button i made toggle for music playback.
-
-Added if check if audio is found or not because it was giving error message in the consle when i i pressed a key that didnt exist else!
-
-Using data-key function for the pad sample player so i can reuse the function and i only have to give the onclick the same number as the data-key that i use for the "keyPlay" function. Reusing as much as possible!
-
-When pressing Reset button due to both the Loop and Backing Tracks play music with the same function they disturb eachother... Have to make my own functions for each of them to work properly.
-
-Fixed by adding objects with their own status depending on the musicId!
-
-Volume set to 0 when page load not working on mobile, scraping idea and letting it be as it is as default, to have a working groove box!

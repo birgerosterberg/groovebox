@@ -193,7 +193,7 @@ function keyPlay(event) {
 }
 
 //
-//    Trying to get this sequencer to work!
+//    My sequencer playing a kick drum sound! Untz Untz!
 //
 
 const sequencers = document.querySelectorAll(".sequencer"); // selects all the elements with the class name of sequencer.
@@ -243,7 +243,7 @@ function playActiveSequencers() {
   currentStep = (currentStep + 1) % sequencers.length;
 
   if (isPlaying) {
-    setTimeout(playActiveSequencers, 300); // Add a delay between each step ToDo: (add choices to change the BPM!)
+    setTimeout(playActiveSequencers, 400); // Add a delay between each step ToDo: (add choices to change the BPM!)
   }
 }
 
