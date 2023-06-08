@@ -27,9 +27,15 @@ https://getcssscan.com/css-box-shadow-examples
 
 ## Wireframe
 
-This marks the beginning of my project, which has undergone significant evolution since its initial wireframe stage. Unfortunately, my trial period for Balsamiq expired, preventing me from creating an updated wireframe reflecting the final result. Nonetheless, this initial wireframe provides a glimpse into my original vision. Now, you can experience the complete product and witness how it has expanded beyond its initial concept. It serves as a testament to its origins while showcasing the complexities it has since embraced.
+This marks the beginning of my project, which has undergone significant evolution since its initial wireframe stage. Nonetheless, this initial wireframe provides a glimpse into my original vision. Now, you can experience the complete product and witness how it has expanded beyond its initial concept. It serves as a testament to its origins while showcasing the complexities it has since embraced.
 
 ![wireframe sketch](assets/readme/wirefram-start.png)
+
+![wireframe drummachine](assets/readme/wirefm.png)
+![wireframe sequencer](assets/readme/wireseq.png)
+![wireframe loops](assets/readme/wireloops.png)
+![wireframe backingtracks](assets/readme/wirebck.png)
+![wireframe audio(Desktop Only)](assets/readme/wireaudio.png)
 
 ---
 
