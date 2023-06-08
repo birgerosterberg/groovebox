@@ -136,6 +136,9 @@ a:visited {
   font-size: 18px;
 }
 /* Volume designs! */
+.vol-hide {
+  display: none;
+}
 #volume-status {
   font-size: 14px;
   margin: 0;
@@ -331,6 +334,11 @@ kbd {
   .modal-content {
     width: 50%;
     margin: 5% auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .vol-hide {
+    display: block;
   }
 }
 
