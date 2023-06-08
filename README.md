@@ -106,6 +106,14 @@ The backing tracks feature effortlessly adds finished songs as a background laye
 
 ---
 
+### **404 Page**
+
+When trying to reach a page that dont exist, you get directed to 404.html that gives you an easy choice to find the right way back!
+
+![404](assets/readme/404.png)
+
+---
+
 ### **Features Left to Implement**
 
 I had several features in mind that I truly wanted to implement to transform this into an exceptional groove box. However, I needed to ensure that the existing components were working flawlessly. Let me share with you an idea of what I envision for further implementation. I must say, this has been one of the most enjoyable programming experiences I've ever had! Initially, it started as a basic drum machine accompanied by a backing track, but as time went on, I found myself increasingly inspired. I couldn't resist pushing the boundaries and taking it to new heights. It dawned on me that JavaScript has the potential to create something truly incredible, beyond what I could have ever imagined.
@@ -254,6 +262,7 @@ In the Jshint report, it states that there are five unused variables in my code.
 - How To: Opens modal, works as intended.
 
   - X Closes the modal, also Escape key closes the modal, works as intended.
+  - Links to Linkedin and GitHub, opens in new tab, works as intended.
 
 ---
 
@@ -307,7 +316,7 @@ In the Jshint report, it states that there are five unused variables in my code.
 
 ### **Trial and Error**
 
-During this project i have had the most problems with getting things working the same on mobile and desktop platforms, the biggest Throughout this project, I encountered several challenges in achieving consistent functionality across both mobile and desktop platforms. My main hurdle was relying on the "responsive" mobile mode in the browser's development tools, mistakenly assuming it accurately simulated the behavior of actual mobile devices. This oversight resulted in numerous bugs that became apparent only when testing the deployed version on real devices. Fortunately, with the help of friends and family, I was able to identify any overlooked issues and make the necessary adjustments to improve the Groove Box's performance.
+I encountered several challenges in achieving consistent functionality across both mobile and desktop platforms. My main hurdle was relying on the "responsive" mobile mode in the browser's development tools, mistakenly assuming it accurately simulated the behavior of actual mobile devices. This oversight resulted in numerous bugs that became apparent only when testing the deployed version on real devices. Fortunately, with the help of friends and family, I was able to identify any overlooked issues and make the necessary adjustments to improve the Groove Box performance.
 
 ### **Issues**
 
@@ -380,14 +389,16 @@ https://www.stackoverflow.com/
 
 ### Samples
 
-https://soundpacks.com/free-sound-packs/jazz-drum-kit/
-https://www.drumkito.com/sample-packs/roland-tr-808-sample-pack/
+https://soundpacks.com/free-sound-packs/jazz-drum-kit/ \
+https://samplefocus.com \
+https://www.drumkito.com/sample-packs/roland-tr-808-sample-pack
 
 ### Songs
 
 https://www.drumeo.com/free-playalongs \
 https://www.wikiloops.com/tracks/Jazz-without-Drums.php
 
-## Buggs
+## Credits
 
-Fixes:
+- I want to express my heartfelt appreciation to all the amazing individuals at StackOverflow. The wealth of knowledge i found there was key in bringing this project to its current state. Their invaluable contributions and guidance helped me overcome numerous challenges and make significant progress.
+- My Mentors Gareth McGirr and Daisy McGirr, for guidance, motivation and support!
