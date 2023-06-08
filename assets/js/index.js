@@ -112,11 +112,9 @@ const increaseVol = document.getElementById("increase-vol");
 const decreaseVol = document.getElementById("decrease-vol");
 
 // Add event listeners for both click and touch events
-increaseVol.addEventListener("click", increaseVolume);
-increaseVol.addEventListener("touchstart", increaseVolume);
+increaseVol.addEventListener("pointerdown", increaseVolume);
 
-decreaseVol.addEventListener("click", decreaseVolume);
-decreaseVol.addEventListener("touchstart", decreaseVolume);
+decreaseVol.addEventListener("pointerdown", decreaseVolume);
 
 /** Pause function */
 // Function to pause all audio elements
